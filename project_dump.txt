@@ -1,0 +1,3044 @@
+﻿================================================================================
+                        STRUKTURA PROJEKTU
+================================================================================
+Projekt: C:\Users\Radek\Desktop\ATOMOWKI\Atomowki-Lodz
+Data:    2026-11-24 08:29:14
+Plikow:  19
+================================================================================
+
+css/
+  animations.css (1,4 KB)
+  responsive.css (2,3 KB)
+  style.css (48,6 KB)
+index.html (10,7 KB)
+js/
+  data.js (9,9 KB)
+  gallery.js (3,1 KB)
+  main.js (21,3 KB)
+  players.js (3,1 KB)
+pages/
+  akademia.html (3,9 KB)
+  aktualnosci.html (2,2 KB)
+  druzyna.html (2,3 KB)
+  galeria.html (2,7 KB)
+  historia.html (3,7 KB)
+  kontakt.html (3,7 KB)
+  o-klubie.html (4,3 KB)
+  reprezentacja.html (3,9 KB)
+  rozgrywki.html (2,2 KB)
+  sukcesy.html (1,5 KB)
+README.md (2,0 KB)
+
+================================================================================
+                        ZAWARTOSC PLIKOW
+================================================================================
+
+================================================================================
+PLIK: index.html
+ROZMIAR: 10972 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venol Atomówki Łódź – Kobiece Rugby | Siła. Pasja. Drużyna.</title>
+  <meta name="description" content="Oficjalna strona kobiecej drużyny rugby Venol Atomówki Łódź. Historia, zawodniczki, akademia U13 i U16, rozgrywki, sukcesy, aktualności i kontakt." />
+  <meta property="og:title" content="Venol Atomówki Łódź – Kobiece Rugby" />
+  <meta property="og:description" content="Siła. Pasja. Drużyna. Poznaj kobiecy klub rugby z Łodzi." />
+  <meta property="og:type" content="website" />
+  
+  <link rel="canonical" href="https://atomowki-lodz.pl/" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="home">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+
+  <!-- UJEDNOLICONY HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-fluid header-inner">
+      <a href="index.html" class="brand" aria-label="Atomówki Łódź – strona główna">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44"><circle cx="32" cy="32" r="30" fill="#e10600"/><path d="M32 10 L38 28 L56 28 L42 40 L48 58 L32 46 L16 58 L22 40 L8 28 L26 28 Z" fill="#0b0b0d"/></svg>
+        </span>
+        <div class="brand-text">
+          <span class="venol">VENOL</span>
+          <strong>ATOMÓWKI</strong>
+          <span class="lodz">ŁÓDŹ</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Menu główne">
+        <ul>
+          <li><a href="index.html" class="active"><svg class="home-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:6px; vertical-align:middle;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>STRONA GŁÓWNA</a></li>
+          <li><a href="pages/o-klubie.html">O KLUBIE</a></li>
+          <li><a href="pages/historia.html">HISTORIA</a></li>
+          <li><a href="pages/druzyna.html">DRUŻYNA ⌄</a></li>
+          <li><a href="pages/reprezentacja.html">REPREZENTACJA</a></li>
+          <li><a href="pages/akademia.html">AKADEMIA</a></li>
+          <li><a href="pages/rozgrywki.html">ROZGRYWKI</a></li>
+          <li><a href="pages/sukcesy.html">SUKCESY</a></li>
+          <li><a href="pages/aktualnosci.html">AKTUALNOŚCI</a></li>
+          <li><a href="pages/galeria.html">GALERIA</a></li>
+          <li><a href="pages/kontakt.html">KONTAKT</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="pages/kontakt.html#dolacz" class="btn-nav-cta"><span>DOŁĄCZ</span> <span class="arrow">&raquo;</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Sekcja powitalna">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/images/slider-1.jpg" alt="Slajd 1" class="hero-photo slider-img active" />
+        <img src="assets/images/slider-2.jpg" alt="Slajd 2" class="hero-photo slider-img" />
+        <img src="assets/images/slider-3.jpg" alt="Slajd 3" class="hero-photo slider-img" />
+        <img src="assets/images/slider-4.jpg" alt="Slajd 4" class="hero-photo slider-img" />
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="container hero-content-wrapper">
+        <div class="hero-text-box">
+          <p class="hero-kicker animate-in">EST. 2009 · ŁÓDŹ, POLSKA</p>
+          
+          <h1 class="hero-title animate-in delay-1">
+            ATOMÓWKI<span class="accent">2</span>RUGBY
+          </h1>
+          
+          <p class="hero-subtitle animate-in delay-2">VENOL ATOMÓWKI ŁÓDŹ</p>
+          <p class="hero-motto animate-in delay-3">SIŁA. PASJA. DRUŻYNA.</p>
+          
+          <div class="hero-actions animate-in delay-4">
+            <a href="pages/kontakt.html#dolacz" class="btn-hero btn-hero-primary">DOŁĄCZ DO DRUŻYNY &raquo;</a>
+            <a href="pages/o-klubie.html" class="btn-hero btn-hero-outline">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 8px;"><path d="M8 5v14l11-7z"/></svg>
+              POZNAJ NASZE STORY
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Nawigacja slidera (strzałki i kropki) -->
+      <div class="hero-slider-nav">
+        <button class="slider-arrow prev" aria-label="Poprzedni slajd">&lsaquo;</button>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="slider-arrow next" aria-label="Następny slajd">&rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- O KLUBIE Z TŁEM SMOKE -->
+    <section id="o-klubie" class="section section-about-dark">
+      <div class="container two-col">
+        <div class="reveal">
+          <p class="section-kicker">O klubie</p>
+          <h2 class="section-title">Rugby kobiet z łódzką tożsamością</h2>
+          <p>Venol Atomówki Łódź to kobieca drużyna rugby związana z BBRC Łódź. Historia żeńskiej sekcji sięga <strong>2009 roku</strong>, a nazwa „Atomówki” pojawiła się w <strong>2010 roku</strong>. Klub konsekwentnie rozwija kobiece rugby w Łodzi, uczestniczy w krajowych rozgrywkach rugby 7 i prowadzi szkolenie młodzieży.</p>
+          <a href="pages/o-klubie.html" class="btn btn-ghost">Poznaj historię →</a>
+        </div>
+        <div class="timeline-preview reveal delay-1">
+          <ol class="mini-timeline">
+            <li><span>2009</span><p>Powstanie żeńskiej sekcji rugby w Łodzi.</p></li>
+            <li><span>2010</span><p>Narodziny nazwy „Atomówki”.</p></li>
+            <li><span>2018+</span><p>Medale krajowego czempionatu sekcji młodzieżowej.</p></li>
+            <li><span>2026</span><p>Brąz Mistrzostw Polski U16.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem">
+          <div>
+            <p class="section-kicker">Reprezentacja Polski</p>
+            <h2 class="section-title">Atomówki w reprezentacji</h2>
+            <p class="section-lead">W grudniu 2022 roku sześć zawodniczek Atomówek otrzymało powołania na zgrupowanie reprezentacji młodzieżowych U18 i U16.</p>
+          </div>
+          <a href="pages/reprezentacja.html" class="btn btn-ghost">Wszystkie reprezentantki →</a>
+        </header>
+        <div id="nationalMini" class="national-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box reveal">
+        <div>
+          <p class="section-kicker">Akademia Atomówek</p>
+          <h2 class="section-title">Zacznij grać w rugby</h2>
+          <p>Kategorie U13 i U16 · treningi w Łodzi · wsparcie dla rodziców i początkujących.</p>
+        </div>
+        <a href="pages/akademia.html" class="btn btn-primary btn-lg">DOŁĄCZ DO ATOMÓWEK</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-kicker">Aktualności</p>
+            <h2 class="section-title">Co słychać u Atomówek</h2>
+          </div>
+          <a href="pages/aktualnosci.html" class="btn btn-ghost">Wszystkie wpisy →</a>
+        </header>
+        <div class="news-grid" id="homeNewsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-sponsors">
+      <div class="container">
+        <p class="section-kicker text-center">Sponsorzy i partnerzy</p>
+        <h2 class="section-title text-center">Wspierają Atomówki</h2>
+        <div id="sponsorGrid" class="sponsor-pro-grid" aria-live="polite"></div>
+        <p class="hint text-center">Sponsorzy i partnerzy — status współpracy wymaga weryfikacji przez klub. Dane edytowalne w <code>js/data.js</code> → <code>ATOMOWKI_DATA.sponsors</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="36" height="36"><circle cx="32" cy="32" r="30" fill="#e10600"/><path d="M32 10 L38 28 L56 28 L42 40 L48 58 L32 46 L16 58 L22 40 L8 28 L26 28 Z" fill="#0b0b0d"/></svg>
+        </span>
+        <p><strong>VENOL ATOMÓWKI ŁÓDŹ</strong><br />Kobieca drużyna rugby. Siła. Pasja. Drużyna.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul class="footer-links">
+          <li><a href="pages/o-klubie.html">O klubie</a></li>
+          <li><a href="pages/historia.html">Historia</a></li>
+          <li><a href="pages/druzyna.html">Drużyna</a></li>
+          <li><a href="pages/reprezentacja.html">Reprezentacja</a></li>
+          <li><a href="pages/akademia.html">Akademia</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul class="footer-links">
+          <li><a href="pages/kontakt.html">Formularz kontaktowy</a></li>
+          <li><a href="mailto:kontakt@atomowki-lodz.pl">kontakt@atomowki-lodz.pl</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Strona BBRC Łódź</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informacje</h4>
+        <ul class="footer-links">
+          <li><a href="pages/kontakt.html#polityka">Polityka prywatności</a></li>
+          <li><a href="README.md">Dokumentacja</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Venol Atomówki Łódź. Wszelkie prawa zastrzeżone.</p>
+      <p>Dane kontaktowe wymagają potwierdzenia przed publikacją.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+PLIK: README.md
+ROZMIAR: 2004 bajtow
+--------------------------------------------------------------------------------
+# VENOL ATOMOWKI LODZ - strona internetowa
+
+Kompletna, statyczna strona klubu kobiecej druzyny rugby **Venol Atomowki Lodz**.
+
+## Uruchomienie
+
+1. Skopiuj caly folder `Atomowki-Lodz/` na dysk.
+2. Otworz plik `index.html` w dowolnej nowoczesnej przegladarce (Chrome, Firefox, Edge, Safari).
+3. Nie wymaga Node.js, serwera ani frameworkow.
+
+> Uwaga: w niektorych przegladarkach pliki lokalne (`file://`) moga blokowac czesc funkcji.
+> Jesli chcesz miec pelna pewnosc, uruchom prosty serwer statyczny, np.:
+> `python -m http.server 8000` - i wejdz na `http://localhost:8000`.
+
+## Struktura
+
+- `index.html` - strona glowna
+- `pages/` - podstrony: o klubie, druzyna, akademia, rozgrywki, sukcesy, aktualnosci, galeria, kontakt
+- `css/` - `style.css`, `animations.css`, `responsive.css`
+- `js/` - `data.js` (dane), `main.js` (logika wspolna), `players.js`, `gallery.js`
+- `assets/` - miejsce na zdjecia, logotypy, ikony
+
+## Edycja tresci
+
+Wszystkie dane klubowe znajduja sie w pliku **`js/data.js`** w obiekcie `ATOMOWKI_DATA`:
+
+- `players` - zawodniczki (kategorie: `senior`, `u16`, `u13`)
+- `news` - aktualnosci
+- `successes` - sukcesy
+- `matches` - mecze i wyniki
+- `league` - tabela rozgrywek
+- `gallery` - zdjecia
+- `academy` - treningi i FAQ
+
+## Brakujace materialy (do uzupelnienia przez klub)
+
+- Oryginalne zdjecia druzyny, zawodniczek, meczow, treningow
+- Logotypy: Venol, BBRC Lodz, sponsorzy i partnerzy
+- Imiona i nazwiska zawodniczek, numery, pozycje
+- Terminy i miejsca treningow
+- Terminy meczow, wyniki, tabele
+- Potwierdzone dane kontaktowe (adres, telefon, e-mail, Facebook, strona klubu)
+- Pelna polityka prywatnosci
+- Konfiguracja wysylki formularza (backend / Formspree)
+- Mapa lokalizacji (osadzenie Google Maps / OpenStreetMap)
+
+## Formularz kontaktowy
+
+Formularz waliduje pola, ale **nie wysyla wiadomosci** - nie ma backendu.
+Aby wysylac wiadomosci, podlacz zewnetrzna usluge (np. Formspree) lub wlasny endpoint.
+
+## Licencja
+
+Kod przygotowany na potrzeby klubu Venol Atomowki Lodz.
+================================================================================
+PLIK: css\animations.css
+ROZMIAR: 1398 bajtow
+--------------------------------------------------------------------------------
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal.delay-1{transition-delay:.1s}
+.reveal.delay-2{transition-delay:.2s}
+.reveal.delay-3{transition-delay:.3s}
+.reveal.delay-4{transition-delay:.4s}
+.reveal.delay-5{transition-delay:.5s}
+
+/* Hero entrance */
+.animate-in{opacity:0;transform:translateY(22px);animation:heroIn .8s forwards}
+.animate-in.delay-1{animation-delay:.12s}
+.animate-in.delay-2{animation-delay:.24s}
+.animate-in.delay-3{animation-delay:.36s}
+.animate-in.delay-4{animation-delay:.48s}
+.animate-in.delay-5{animation-delay:.6s}
+@keyframes heroIn{to{opacity:1;transform:none}}
+
+/* Scroll hint */
+@keyframes scrollDot{
+  0%{opacity:1;transform:translateY(0)}
+  70%{opacity:0;transform:translateY(16px)}
+  100%{opacity:0}
+}
+
+/* Button pulse */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transform:translateX(-100%);transition:transform .6s}
+.btn-primary:hover::after{transform:translateX(100%)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .reveal{opacity:1;transform:none}
+  .animate-in{opacity:1;transform:none}
+}
+================================================================================
+PLIK: css\responsive.css
+ROZMIAR: 2339 bajtow
+--------------------------------------------------------------------------------
+@media (max-width:1080px){
+  .players-grid{grid-template-columns:repeat(3,1fr)}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .success-grid{grid-template-columns:repeat(2,1fr)}
+  .sponsor-grid{grid-template-columns:repeat(2,1fr)}
+  .match-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+
+@media (max-width:860px){
+  .nav-toggle{display:flex}
+  .primary-nav{position:fixed;inset:var(--header-h) 0 auto 0;background:rgba(11,11,13,.98);border-bottom:1px solid rgba(255,255,255,.08);transform:translateY(-120%);transition:transform .35s ease;max-height:calc(100vh - var(--header-h));overflow:auto;padding:1rem;z-index:90}
+  .primary-nav.open{transform:none}
+  .primary-nav ul{flex-direction:column;align-items:stretch;gap:.2rem}
+  .primary-nav a{padding:.9rem 1rem;font-size:.95rem;border-radius:8px}
+  .primary-nav a.active::after{left:1rem;right:auto;width:22px}
+  .two-col,.grid-2{grid-template-columns:1fr;gap:2rem}
+  .hero-stats{gap:1.4rem}
+  .training-list{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:640px){
+  .header-inner{min-height:64px}
+  .brand-text strong{font-size:.9rem}
+  .brand-text small{font-size:.58rem;letter-spacing:.12em}
+  .hero{min-height:calc(100svh - 64px)}
+  .hero-content{padding-block:2.5rem}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .hero-stats{flex-direction:column;gap:.8rem}
+  .players-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid,.success-grid,.match-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .sponsor-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-box{padding:1.6rem}
+  .cta-box .btn{width:100%}
+  .timeline li{grid-template-columns:1fr;gap:.3rem;padding-left:1.2rem}
+  .timeline .year::before{left:-1.65rem}
+  .lightbox-prev,.lightbox-next{width:44px;height:44px;font-size:1.8rem}
+  .lightbox-prev{left:.4rem}.lightbox-next{right:.4rem}
+  .footer-bottom{flex-direction:column}
+}
+
+@media (max-width:380px){
+  .players-grid{grid-template-columns:1fr}
+  .container{width:min(100% - 1.6rem,var(--container))}
+}
+================================================================================
+PLIK: css\style.css
+ROZMIAR: 49742 bajtow
+--------------------------------------------------------------------------------
+/* ============ RESET & TOKENS ============ */
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --black:#0b0b0d;
+  --graphite:#15161a;
+  --graphite-2:#1d1f24;
+  --red:#e10600;
+  --red-dark:#b00400;
+  --white:#ffffff;
+  --gray-1:#c9ccd3;
+  --gray-2:#8b8f99;
+  --gray-3:#4a4d55;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --font-display:'Barlow Condensed',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --container:1200px;
+  --header-h:76px;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font-body);background:var(--black);color:var(--white);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.05;letter-spacing:.02em;margin:0 0 .6em;text-transform:uppercase}
+p{margin:0 0 1em;color:var(--gray-1)}
+code{background:var(--graphite-2);padding:.15em .4em;border-radius:5px;font-size:.9em;color:#ffd7d5}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.container{width:min(100% - 2.5rem,var(--container));margin-inline:auto}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--red);color:#fff;padding:.7rem 1rem;z-index:200}
+.skip-link:focus{left:1rem;top:1rem}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.85rem 1.5rem;border-radius:var(--radius-sm);border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;font-size:.95rem}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 25px rgba(225,6,0,.35)}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-outline:hover{background:#fff;color:var(--black);border-color:#fff}
+.btn-ghost{color:var(--white);padding-left:0}
+.btn-ghost:hover{color:var(--red)}
+.btn-lg{padding:1.1rem 2rem;font-size:1.05rem}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:calc(100vh - var(--header-h));display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-placeholder{position:absolute;inset:0;display:grid;place-items:center;gap:.3rem;text-align:center;background:
+  radial-gradient(circle at 30% 30%,rgba(225,6,0,.25),transparent 55%),
+  repeating-linear-gradient(45deg,#111 0 22px,#0d0d0f 22px 44px);
+}
+.hero-placeholder span{font-family:var(--font-display);font-size:clamp(1.1rem,3vw,1.8rem);letter-spacing:.2em;color:rgba(255,255,255,.35)}
+.hero-placeholder small{color:rgba(255,255,255,.25);letter-spacing:.1em}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,13,.95) 0%,rgba(11,11,13,.78) 45%,rgba(11,11,13,.45) 100%)}
+.hero-content{position:relative;z-index:2;padding-block:4rem}
+.hero-kicker{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+.hero-title{font-size:clamp(2.8rem,8vw,6.5rem);letter-spacing:.01em;margin:.3em 0}
+.hero-title .accent{color:var(--red)}
+.hero-motto{font-family:var(--font-display);font-size:clamp(1.1rem,2.4vw,1.7rem);letter-spacing:.35em;color:var(--white);margin-bottom:1rem}
+.hero-desc{max-width:620px;font-size:1.02rem}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.8rem 0}
+.hero-stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.12)}
+.hero-stats li{display:flex;flex-direction:column}
+.hero-stats strong{font-family:var(--font-display);font-size:1.5rem;color:var(--white)}
+.hero-stats span{font-size:.78rem;color:var(--gray-2);letter-spacing:.08em;text-transform:uppercase}
+.scroll-hint{position:absolute;left:50%;bottom:1.4rem;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.35);border-radius:16px;z-index:2}
+.scroll-hint span{position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:var(--red);border-radius:2px;animation:scrollDot 1.6s infinite}
+
+/* ============ SECTIONS ============ */
+.section{padding:clamp(3.5rem,7vw,6rem) 0;position:relative}
+.section-alt{background:var(--graphite)}
+.section-kicker{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:.4rem}
+.section-title{font-size:clamp(1.8rem,4vw,3rem)}
+.section-lead{max-width:720px;color:var(--gray-1)}
+.text-center{text-align:center}
+.hint{font-size:.8rem;color:var(--gray-2);margin-top:1rem}
+.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:start}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+
+/* mini timeline */
+.mini-timeline li{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mini-timeline span{font-family:var(--font-display);font-size:1.3rem;color:var(--red);min-width:70px}
+.mini-timeline p{margin:0;font-size:.92rem}
+.timeline{position:relative;padding-left:1rem}
+.timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--red),transparent)}
+.timeline li{position:relative;display:grid;grid-template-columns:100px 1fr;gap:1.4rem;padding:1.4rem 0 1.4rem 1.5rem}
+.timeline .year{font-family:var(--font-display);font-size:1.5rem;color:var(--red);position:relative}
+.timeline .year::before{content:"";position:absolute;left:-1.98rem;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(225,6,0,.2)}
+.timeline h3{margin-bottom:.2em}
+.timeline p{margin:0;font-size:.95rem}
+
+/* info cards */
+.info-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.8rem}
+.info-card h2,.info-card h3{margin-top:0}
+.stats-list{display:grid;gap:1rem}
+.stats-list li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px dashed rgba(255,255,255,.12);padding-bottom:.7rem}
+.stats-list strong{font-family:var(--font-display);font-size:1.25rem;color:var(--white)}
+.stats-list span{color:var(--gray-2);font-size:.85rem}
+.check-list{margin-top:.6rem;display:grid;gap:.45rem}
+.check-list li{padding-left:1.4rem;position:relative;font-size:.92rem;color:var(--gray-1)}
+.check-list li::before{content:"\2714";position:absolute;left:0;color:var(--red)}
+
+/* CTA */
+.section-cta{padding-block:3rem}
+.cta-box{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:linear-gradient(120deg,var(--red-dark),var(--red));border-radius:var(--radius);padding:2.4rem;box-shadow:var(--shadow)}
+.cta-box .section-title{color:#fff;margin-bottom:.3em}
+.cta-box p{color:rgba(255,255,255,.85)}
+.cta-box .btn-primary{background:var(--black)}
+.cta-box .btn-primary:hover{background:#000}
+
+/* values */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.value-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.6rem;transition:transform .25s,border-color .25s}
+.value-card:hover{transform:translateY(-4px);border-color:var(--red)}
+.value-card h3{color:var(--white);font-size:1.25rem}
+.value-card p{font-size:.9rem;margin:0}
+
+/* news */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.news-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.news-card:hover{transform:translateY(-4px);border-color:rgba(225,6,0,.6)}
+.news-thumb{aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.news-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.news-meta{display:flex;gap:.7rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-2)}
+.news-cat{color:var(--red);font-weight:700}
+.news-body h3{font-size:1.15rem;margin:0}
+.news-body p{font-size:.9rem;margin:0}
+.news-body .btn{margin-top:auto;align-self:flex-start}
+
+/* sponsors */
+.sponsor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.sponsor-slot{border:1px dashed rgba(255,255,255,.2);border-radius:var(--radius);min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;color:var(--gray-1);font-family:var(--font-display);font-size:1.2rem;letter-spacing:.1em;background:rgba(255,255,255,.02)}
+.sponsor-slot small{font-family:var(--font-body);font-size:.7rem;color:var(--gray-2);letter-spacing:.05em}
+
+/* page hero */
+.page-hero{padding:4.5rem 0 2.5rem;background:
+  radial-gradient(900px 300px at 15% 0%,rgba(225,6,0,.22),transparent 60%),
+  linear-gradient(180deg,var(--graphite) 0%,var(--black) 100%);
+  border-bottom:1px solid rgba(255,255,255,.06)}
+.page-title{font-size:clamp(2.2rem,6vw,4rem)}
+.page-lead{max-width:680px}
+
+/* tabs & filters */
+.tabs,.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.tab,.filter{background:var(--graphite-2);border:1px solid rgba(255,255,255,.1);color:var(--gray-1);padding:.6rem 1.1rem;border-radius:999px;cursor:pointer;font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;transition:all .2s}
+.tab:hover,.filter:hover{border-color:var(--red);color:#fff}
+.tab.active,.filter.active{background:var(--red);border-color:var(--red);color:#fff}
+
+/* players */
+.players-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.player-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit;transition:transform .25s,border-color .25s}
+.player-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.player-photo{aspect-ratio:3/4;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;position:relative;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:.5rem}
+.player-number{position:absolute;top:.6rem;right:.6rem;background:var(--red);font-family:var(--font-display);font-weight:800;font-size:1.2rem;width:44px;height:44px;display:grid;place-items:center;border-radius:50%}
+.player-info{padding:1rem 1.1rem 1.2rem}
+.player-info h3{font-size:1.1rem;margin:0 0 .2em}
+.player-pos{font-size:.75rem;color:var(--red);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+
+/* training */
+.training-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.training-card{background:var(--graphite-2);border-left:4px solid var(--red);border-radius:var(--radius-sm);padding:1.2rem 1.4rem}
+.training-card h3{margin:0 0 .3em;font-size:1.15rem}
+.training-card p{margin:0;font-size:.9rem}
+
+/* FAQ */
+.faq{display:grid;gap:.7rem;max-width:860px}
+.faq-item{border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-sm);background:var(--graphite-2);overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:0;color:#fff;padding:1rem 1.2rem;cursor:pointer;font-family:var(--font-body);font-size:1rem;font-weight:600;text-align:left}
+.faq-q::after{content:"+";font-family:var(--font-display);font-size:1.4rem;color:var(--red);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.2rem}
+.faq-a p{padding-bottom:1rem;margin:0;font-size:.92rem}
+
+/* matches */
+.match-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.match-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem}
+.match-teams{display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.2rem;letter-spacing:.03em;margin-bottom:.8rem}
+.match-vs{color:var(--red);font-size:.85rem}
+.match-score{font-family:var(--font-display);font-size:1.7rem;color:#fff;text-align:center;margin-bottom:.6rem}
+.match-info{display:grid;gap:.25rem;font-size:.82rem;color:var(--gray-2);border-top:1px solid rgba(255,255,255,.08);padding-top:.8rem}
+.match-info strong{color:var(--gray-1);font-weight:600}
+.empty-note{border:1px dashed rgba(255,255,255,.2);padding:1.2rem;border-radius:var(--radius);color:var(--gray-2);font-size:.9rem}
+
+/* league table */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08)}
+.league-table{width:100%;border-collapse:collapse;min-width:520px}
+.league-table th,.league-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+.league-table th{background:var(--graphite-2);font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;color:var(--gray-1);font-size:.8rem}
+.league-table tr:hover td{background:rgba(225,6,0,.06)}
+
+/* successes */
+.success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.success-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden}
+.success-photo{aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.success-body{padding:1.2rem 1.3rem 1.4rem}
+.success-meta{display:flex;gap:.7rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-2);margin-bottom:.5rem}
+.success-meta .cat{color:var(--red);font-weight:700}
+.success-body h3{font-size:1.2rem;margin:0 0 .3em}
+.success-body p{font-size:.9rem;margin:0}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.gallery-item{position:relative;aspect-ratio:1;border-radius:var(--radius-sm);overflow:hidden;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);border:0;cursor:pointer;padding:0;display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;transition:transform .25s}
+.gallery-item:hover{transform:scale(1.03)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .gallery-cat{position:absolute;left:.4rem;bottom:.4rem;background:rgba(11,11,13,.8);color:var(--red);font-size:.62rem;padding:.2rem .45rem;border-radius:4px;letter-spacing:.08em}
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(5,5,7,.96);display:none;place-items:center;padding:2rem}
+.lightbox.open{display:grid}
+.lightbox-figure{max-width:min(1000px,92vw);text-align:center}
+.lightbox-image{min-height:320px;border-radius:var(--radius-sm);display:grid;place-items:center;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);color:rgba(255,255,255,.35);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:2rem}
+.lightbox-image img{max-height:70vh;width:auto;margin:auto}
+.lightbox figcaption{color:var(--gray-1);margin-top:.9rem;font-size:.9rem}
+.lightbox-close{position:absolute;top:1rem;right:1.2rem;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.06);border:0;color:#fff;font-size:2.4rem;width:56px;height:56px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lightbox-prev{left:1rem}.lightbox-next{right:1rem}
+.lightbox-prev:hover,.lightbox-next:hover{background:var(--red)}
+
+/* contact */
+.contact-list{display:grid;gap:.8rem;margin-bottom:1.6rem}
+.contact-list li{font-size:.95rem}
+.contact-list strong{color:var(--white)}
+.contact-list small{color:var(--gray-2)}
+.map-placeholder{aspect-ratio:16/9;border:1px dashed rgba(255,255,255,.25);border-radius:var(--radius);display:grid;place-items:center;text-align:center;color:var(--gray-2);font-family:var(--font-display);letter-spacing:.12em;font-size:.9rem}
+.contact-form{display:grid;gap:.9rem}
+.contact-form label{display:grid;gap:.35rem;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-1)}
+.contact-form input,.contact-form select,.contact-form textarea{background:var(--graphite-2);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);padding:.8rem .9rem;color:#fff;font:inherit;transition:border-color .2s}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--red);outline:none}
+.contact-form .checkbox{display:flex;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--gray-1)}
+.contact-form .checkbox input{width:auto}
+.form-note{font-size:.85rem;min-height:1.2em}
+.form-note.ok{color:#5dd17a}.form-note.err{color:#ff6b63}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:250;display:none}
+.modal.open{display:grid;place-items:center}
+.modal-backdrop{position:absolute;inset:0;background:rgba(5,5,7,.8);backdrop-filter:blur(4px)}
+.modal-content{position:relative;background:var(--graphite);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);width:min(640px,92vw);max-height:88vh;overflow:auto;padding:2rem;z-index:1}
+.modal-close{position:absolute;top:.6rem;right:.9rem;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+.modal-body h2{color:#fff;margin-bottom:.4em}
+.modal-photo{aspect-ratio:16/9;border-radius:var(--radius-sm);background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+
+/* back to top */
+.back-to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:150;width:46px;height:46px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.back-to-top.show{opacity:1;pointer-events:auto;transform:none}
+
+/* footer */
+.site-footer{background:#08080a;border-top:1px solid rgba(255,255,255,.07);padding-top:3rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.5rem}
+.footer-brand p{font-size:.9rem;margin-top:.8rem}
+.footer-grid h4{font-size:.95rem;letter-spacing:.12em;color:#fff;margin-bottom:1rem}
+.footer-links{display:grid;gap:.45rem}
+.footer-links a{color:var(--gray-2);font-size:.88rem;transition:color .2s}
+.footer-links a:hover{color:var(--red)}
+.footer-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:var(--gray-2)}
+
+/* hero photo */
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* ============================================================
+   MODUL B — ROZBUDOWA (historia, reprezentacja, sponsorzy, sezon)
+   ============================================================ */
+
+/* ---------- OŚ CZASU Z FOTOGRAFIAMI ---------- */
+.timeline-fancy{position:relative;padding-left:0;margin-top:2rem}
+.timeline-fancy::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--red),rgba(225,6,0,.1));transform:translateX(-50%)}
+.timeline-fancy-item{position:relative;display:grid;grid-template-columns:1fr 80px 1fr;gap:1rem;align-items:center;padding:1.5rem 0}
+.timeline-fancy-item .tf-content{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem;transition:border-color .3s,transform .3s}
+.timeline-fancy-item:hover .tf-content{border-color:var(--red);transform:translateY(-3px)}
+.timeline-fancy-item .tf-content h3{margin:0 0 .4em;font-size:1.15rem;color:#fff}
+.timeline-fancy-item .tf-content p{margin:0;font-size:.92rem;color:var(--gray-1)}
+.timeline-fancy-item .tf-photo{aspect-ratio:4/3;border-radius:var(--radius-sm);overflow:hidden;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:.5rem}
+.timeline-fancy-item .tf-photo img{width:100%;height:100%;object-fit:cover}
+.timeline-fancy-item .tf-dot{position:relative;display:grid;place-items:center}
+.timeline-fancy-item .tf-dot span{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--red);background:var(--black);padding:.35rem .8rem;border:2px solid var(--red);border-radius:999px;white-space:nowrap;z-index:1}
+.timeline-fancy-item:nth-child(odd) .tf-content{grid-column:1}
+.timeline-fancy-item:nth-child(odd) .tf-photo{grid-column:3}
+.timeline-fancy-item:nth-child(even) .tf-content{grid-column:3}
+.timeline-fancy-item:nth-child(even) .tf-photo{grid-column:1}
+.timeline-fancy-item:nth-child(even) .tf-dot{grid-column:2;grid-row:1}
+
+/* ---------- KARTY TRENERÓW / KAPITANÓW ---------- */
+.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2rem}
+.coach-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;transition:transform .3s,border-color .3s}
+.coach-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.coach-photo{aspect-ratio:1;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.coach-photo img{width:100%;height:100%;object-fit:cover}
+.coach-body{padding:1.2rem 1.3rem 1.4rem}
+.coach-body h3{margin:0 0 .2em;font-size:1.15rem;color:#fff}
+.coach-role{font-size:.75rem;color:var(--red);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.6rem;display:block}
+.coach-note{font-size:.85rem;color:var(--gray-2);margin:0}
+
+/* ---------- REPREZENTACJA POLSKI ---------- */
+.national-hero{background:linear-gradient(135deg,rgba(225,6,0,.15),transparent 60%);border:1px solid rgba(225,6,0,.35);border-radius:var(--radius);padding:2rem;margin-bottom:2rem}
+.national-hero h2{margin:0 0 .3em}
+.national-hero p{margin:0;color:var(--gray-1)}
+.national-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.national-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;position:relative;transition:transform .3s,border-color .3s}
+.national-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.national-card .nat-photo{aspect-ratio:3/4;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:.5rem}
+.national-card .nat-photo img{width:100%;height:100%;object-fit:cover}
+.national-card .nat-badge{position:absolute;top:.7rem;left:.7rem;background:var(--red);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.72rem;letter-spacing:.1em;padding:.25rem .55rem;border-radius:4px}
+.national-card .nat-body{padding:1.1rem 1.2rem 1.3rem}
+.national-card .nat-body h3{margin:0 0 .2em;font-size:1.05rem;color:#fff}
+.national-card .nat-year{font-size:.72rem;color:var(--red);letter-spacing:.12em;font-weight:700;text-transform:uppercase}
+.national-card .nat-note{font-size:.83rem;color:var(--gray-2);margin:.5rem 0 0}
+
+/* ---------- SPONSORZY PRO ---------- */
+.sponsor-pro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.sponsor-pro{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem 1rem;text-align:center;transition:transform .25s,border-color .25s;min-height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem}
+.sponsor-pro:hover{transform:translateY(-4px);border-color:var(--red)}
+.sponsor-pro .sp-name{font-family:var(--font-display);font-weight:800;font-size:1.05rem;letter-spacing:.06em;color:#fff;text-transform:uppercase}
+.sponsor-pro .sp-role{font-size:.72rem;color:var(--gray-2);letter-spacing:.08em;text-transform:uppercase}
+.sponsor-pro .sp-status{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-top:.4rem;font-weight:700}
+.sp-status.ok{background:rgba(93,209,122,.15);color:#5dd17a;border:1px solid rgba(93,209,122,.4)}
+.sp-status.pending{background:rgba(255,180,0,.12);color:#ffb400;border:1px solid rgba(255,180,0,.35)}
+
+/* ---------- SEZON 2026/2027 ---------- */
+.season-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2rem}
+.season-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.6rem;border-top:4px solid var(--red)}
+.season-card h3{margin:0 0 .2em;font-size:1.2rem}
+.season-meta{display:flex;gap:1rem;flex-wrap:wrap;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-2);margin-bottom:1rem}
+.season-meta .place{color:var(--red);font-weight:700}
+.season-match{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+.season-match:last-child{border-bottom:0}
+.season-match .score{font-family:var(--font-display);font-weight:800;color:#fff;font-size:1rem}
+.season-match .win{color:#5dd17a}
+.season-match .loss{color:#ff6b63}
+.season-note{margin-top:1rem;font-size:.8rem;color:var(--gray-2);border-top:1px dashed rgba(255,255,255,.1);padding-top:.8rem}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:860px){
+  .timeline-fancy::before{left:20px}
+  .timeline-fancy-item{grid-template-columns:40px 1fr;gap:.8rem}
+  .timeline-fancy-item .tf-content,
+  .timeline-fancy-item:nth-child(odd) .tf-content,
+  .timeline-fancy-item:nth-child(even) .tf-content{grid-column:2}
+  .timeline-fancy-item .tf-photo,
+  .timeline-fancy-item:nth-child(odd) .tf-photo,
+  .timeline-fancy-item:nth-child(even) .tf-photo{display:none}
+  .timeline-fancy-item .tf-dot,
+  .timeline-fancy-item:nth-child(even) .tf-dot{grid-column:1;grid-row:1;justify-content:flex-start}
+  .timeline-fancy-item .tf-dot span{font-size:.85rem;padding:.2rem .5rem}
+  .coach-grid{grid-template-columns:1fr 1fr}
+  .national-grid{grid-template-columns:1fr 1fr}
+  .sponsor-pro-grid{grid-template-columns:1fr 1fr}
+  .season-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .coach-grid{grid-template-columns:1fr}
+  .national-grid{grid-template-columns:1fr}
+}
+/* ============================================================
+   MODERNIZACJA WIZUALNA (Dark Sport / Cinematic)
+   ============================================================ */
+
+/* --- NOWY HERO --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--black);
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 20%; opacity: 0.6;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(11,11,13,1) 0%, rgba(11,11,13,0.8) 45%, rgba(11,11,13,0.2) 100%);
+}
+.hero-content-wrapper { position: relative; z-index: 2; width: 100%; }
+.hero-text-box { max-width: 650px; padding-block: 4rem; }
+.hero-kicker {
+  font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gray-1); margin-bottom: 1rem; font-weight: 600;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95; letter-spacing: 0.02em;
+  margin: 0 0 0.5rem; color: var(--white); text-transform: uppercase;
+}
+.hero-title .accent { color: var(--red); }
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.15em; color: var(--white);
+  margin-bottom: 1.5rem; border-bottom: 2px solid var(--red);
+  display: inline-block; padding-bottom: 0.5rem;
+}
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.95rem; letter-spacing: 0.2em;
+  color: var(--gray-2); margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* --- PRZYCISKI --- */
+.btn {
+  border-radius: 4px !important;
+  transition: all 0.3s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { box-shadow: 0 0 20px rgba(225, 6, 0, 0.4); }
+.btn-primary:hover { box-shadow: 0 0 30px rgba(225, 6, 0, 0.6); }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white); background: transparent;
+}
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* --- PRZYCISK CTA W HEADERZE --- */
+.btn-nav-cta {
+  padding: 0.6rem 1.2rem !important;
+  font-size: 0.8rem !important;
+  margin-left: 1rem;
+  box-shadow: none !important;
+  white-space: nowrap;
+}
+@media (max-width: 860px) { .btn-nav-cta { display: none !important; } }
+
+/* --- SEKCJA Z TŁEM SMOKE --- */
+.section-about-dark {
+  position: relative;
+  background-color: var(--black);
+  background-image: url('../assets/images/bg-smoke.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 1px solid rgba(225, 6, 0, 0.2);
+  border-bottom: 1px solid rgba(225, 6, 0, 0.2);
+}
+.section-about-dark::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(11, 11, 13, 0.85); z-index: 1;
+}
+.section-about-dark .container { position: relative; z-index: 2; }
+
+/* ============================================================
+   SLIDER CSS (animacja automatyczna)
+   ============================================================ */
+
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0;
+  animation: fadeSlider 10s infinite;
+}
+
+.slide-1 {
+  animation-delay: 0s;
+}
+
+.slide-2 {
+  animation-delay: 5s;
+}
+
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  5% { opacity: 0.6; }  /* Plynne pojawienie */
+  45% { opacity: 0.6; } /* Trzymanie zdjecia */
+  55% { opacity: 0; }   /* Zanikanie */
+  100% { opacity: 0; }
+}
+
+
+
+
+
+/* ==========================================================
+   PRZESUNIĘCIE NAPISU W HERO (WIĘCEJ MIEJSCA Z LEWEJ)
+   ========================================================== */
+
+/* Przesuwamy kontener z tekstem w prawo, używając padding-left */
+.hero-content-wrapper {
+  /* clamp(min, preferred, max) - dynamicznie dopasowuje margines */
+  padding-left: clamp(2rem, 8vw, 8rem) !important; 
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Upewniamy się, że sam blok z tekstem nie ma ograniczeń */
+.hero-text-box {
+  margin-left: 0 !important;
+  max-width: 800px; /* Zwiększamy maksymalną szerokość, by tekst się nie łamał */
+}
+
+/* Na mniejszych ekranach (mobile) zmniejszamy margines, by tekst był widoczny */
+@media (max-width: 768px) {
+  .hero-content-wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* ============================================================
+   PROFESJONALNY HERO (ZGODNY Z GRAFIKĄ)
+   ============================================================ */
+
+/* 1. Główne tło i kontener */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #050506;
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%; /* Dopasowanie zdjęcia */
+  opacity: 1; /* Zdjęcie ma być wyraźne, gradient je przyciemni */
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  /* Gradient: bardzo ciemny z lewej, przezroczysty z prawej */
+  background: linear-gradient(90deg, rgba(5,5,6,1) 0%, rgba(5,5,6,0.95) 35%, rgba(5,5,6,0.3) 70%, transparent 100%);
+}
+
+/* 2. Tekst po lewej stronie */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(2rem, 8vw, 10rem) !important; /* Przesunięcie w prawo */
+  padding-top: 5vh;
+}
+.hero-text-box { max-width: 650px; }
+
+.hero-kicker {
+  font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #fff; margin-bottom: 1rem; font-weight: 600;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.hero-kicker::after {
+  content: ""; height: 1px; width: 40px; background: var(--red); display: inline-block;
+}
+
+/* 3. Główny napis ATOMÓWKI 2 RUGBY */
+.hero-title {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* Lekki efekt grunge/zużycia na tekście */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.hero-title .accent {
+  color: var(--red);
+}
+
+/* 4. Podtytuł (kursywa, czerwony) */
+.hero-subtitle {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--red);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(225,6,0,0.4);
+}
+
+/* 5. Motto */
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.9rem; letter-spacing: 0.4em;
+  color: #d1d5db; margin-bottom: 3rem;
+  font-weight: 600; text-transform: uppercase;
+}
+
+/* 6. NOWE PRZYCISKI (Ukośne, z poświatą) */
+.hero-actions {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body); font-size: 0.8rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transform: skewX(-15deg); /* Efekt ukośnych krawędzi */
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-hero > * { transform: skewX(15deg); } /* Prostowanie tekstu w środku */
+
+.btn-hero-primary {
+  background: var(--red); color: #fff;
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+}
+.btn-hero-primary:hover {
+  background: #b00400;
+  transform: skewX(-15deg) translateY(-3px);
+  box-shadow: 0 0 30px rgba(225, 6, 0, 0.7);
+}
+
+.btn-hero-outline {
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: skewX(-15deg) translateY(-3px);
+}
+
+/* 7. Nawigacja slidera (Strzałki i kropki) */
+.hero-slider-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 3;
+}
+.slider-arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slider-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+.slider-dots {
+  display: flex; gap: 0.5rem;
+}
+.dot {
+  width: 30px; height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.dot.active {
+  background: var(--red);
+  width: 50px;
+}
+
+/* 8. Responsywność (Mobile) */
+@media (max-width: 900px) {
+  .hero-content-wrapper { padding-left: 1.5rem !important; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .hero-slider-nav { bottom: 1rem; }
+}
+
+/* ============================================================
+   PROFESJONALNY HERO (ZGODNY Z GRAFIKĄ)
+   ============================================================ */
+
+/* 1. Główne tło i kontener */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #050506;
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%; /* Dopasowanie zdjęcia */
+  opacity: 1; /* Zdjęcie ma być wyraźne, gradient je przyciemni */
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  /* Gradient: bardzo ciemny z lewej, przezroczysty z prawej */
+  background: linear-gradient(90deg, rgba(5,5,6,1) 0%, rgba(5,5,6,0.95) 35%, rgba(5,5,6,0.3) 70%, transparent 100%);
+}
+
+/* 2. Tekst po lewej stronie */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(2rem, 8vw, 10rem) !important; /* Przesunięcie w prawo */
+  padding-top: 5vh;
+}
+.hero-text-box { max-width: 650px; }
+
+.hero-kicker {
+  font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #fff; margin-bottom: 1rem; font-weight: 600;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.hero-kicker::after {
+  content: ""; height: 1px; width: 40px; background: var(--red); display: inline-block;
+}
+
+/* 3. Główny napis ATOMÓWKI 2 RUGBY */
+.hero-title {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* Lekki efekt grunge/zużycia na tekście */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.hero-title .accent {
+  color: var(--red);
+}
+
+/* 4. Podtytuł (kursywa, czerwony) */
+.hero-subtitle {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--red);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(225,6,0,0.4);
+}
+
+/* 5. Motto */
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.9rem; letter-spacing: 0.4em;
+  color: #d1d5db; margin-bottom: 3rem;
+  font-weight: 600; text-transform: uppercase;
+}
+
+/* 6. NOWE PRZYCISKI (Ukośne, z poświatą) */
+.hero-actions {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body); font-size: 0.8rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transform: skewX(-15deg); /* Efekt ukośnych krawędzi */
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-hero > * { transform: skewX(15deg); } /* Prostowanie tekstu w środku */
+
+.btn-hero-primary {
+  background: var(--red); color: #fff;
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+}
+.btn-hero-primary:hover {
+  background: #b00400;
+  transform: skewX(-15deg) translateY(-3px);
+  box-shadow: 0 0 30px rgba(225, 6, 0, 0.7);
+}
+
+.btn-hero-outline {
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: skewX(-15deg) translateY(-3px);
+}
+
+/* 7. Nawigacja slidera (Strzałki i kropki) */
+.hero-slider-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 3;
+}
+.slider-arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slider-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+.slider-dots {
+  display: flex; gap: 0.5rem;
+}
+.dot {
+  width: 30px; height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.dot.active {
+  background: var(--red);
+  width: 50px;
+}
+
+/* 8. Responsywność (Mobile) */
+@media (max-width: 900px) {
+  .hero-content-wrapper { padding-left: 1.5rem !important; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .hero-slider-nav { bottom: 1rem; }
+}
+
+/* ============================================================
+   NOWE TŁA I BANERY (Z INTEGRACJI ZDJĘĆ)
+   ============================================================ */
+
+/* 1. Tło dla sekcji "O klubie" (Czerwony dym) */
+.section-about-dark {
+  background-image: url('../assets/images/new-5.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 2. Tło dla sekcji Sponsorzy (Zdjęcie sponsorów) */
+.section-sponsors {
+  background-image: 
+    linear-gradient(rgba(11, 11, 13, 0.9), rgba(11, 11, 13, 0.95)), 
+    url('../assets/images/new-2.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 3. Tło dla pustych kart zawodniczek (Czerwone smugi zamiast pasków) */
+.player-photo, .nat-photo, .news-thumb {
+  background: url('../assets/images/new-1.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 4. Tło dla sekcji "Reprezentacja" na stronie głównej */
+.section-alt {
+  background: transparent !important;
+  /* Jeśli chcesz tło z drużyną, odkomentuj poniższą linię */
+  /* background-image: linear-gradient(rgba(11,11,13,0.9), rgba(11,11,13,0.9)), url('../assets/images/new-6.jpg') !important; */
+}
+
+/* 5. Poprawka dla slidera, aby nowe zdjęcia ładnie się wyświetlały */
+.hero-photo {
+  object-position: center 30% !important;
+}
+
+/* ============================================================
+   WYMUSZENIE NOWYCH TŁ (TWARDA INIEKCJA)
+   ============================================================ */
+
+/* 1. Slider - tło ze stadionu (jeśli HTML nie zadziałał) */
+.hero {
+  background-image: url('../assets/images/new-4.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 2. Sekcja "O klubie" - Czerwony dym */
+.section-about-dark {
+  background-image: linear-gradient(rgba(11,11,13,0.8), rgba(11,11,13,0.8)), url('../assets/images/new-5.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+.section-about-dark::before {
+  display: none !important; /* Usuwamy starą czarną nakładkę, by dym był widoczny */
+}
+
+/* 3. Sekcja "Sponsorzy" - Tło z logotypami */
+.section-sponsors {
+  background-image: linear-gradient(rgba(11,11,13,0.9), rgba(11,11,13,0.95)), url('../assets/images/new-2.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 4. Puste karty zawodniczek - Tło z czerwonymi smugami */
+.player-photo, .nat-photo, .news-thumb {
+  background-image: url('../assets/images/new-1.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Upewniamy się, że tekst na tych tłach jest czytelny */
+.player-card { background: rgba(21, 22, 26, 0.8) !important; }
+.news-card { background: rgba(21, 22, 26, 0.8) !important; }
+.national-card { background: rgba(21, 22, 26, 0.8) !important; }
+
+
+/* ============================================================
+   FINALNE MENU - LITA CZERŃ I CZYSTE STYLE (BEZ BŁĘDÓW)
+   ============================================================ */
+
+/* 1. Nagłówek - Wymuszamy 100% litej czerni i usuwamy efekt szkła */
+.site-header {
+  background: #050506 !important; /* Czysta czerń */
+  backdrop-filter: none !important; /* Usuwamy rozmycie */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: none !important;
+}
+
+/* 2. Ukośne, czerwone cięcia w tle (ostre, bez mgły) */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(105deg, transparent 8%, rgba(225, 6, 0, 0.4) 10%, transparent 13%),
+    linear-gradient(105deg, transparent 87%, rgba(225, 6, 0, 0.3) 90%, transparent 93%) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3. Dolna linia (Tunel) - Jasna, świecąca */
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 15%, #fff 50%, rgba(255,255,255,0.6) 85%, transparent 100%) !important;
+  box-shadow: 
+    0 0 10px 2px rgba(225, 6, 0, 0.8),
+    0 0 20px 6px rgba(225, 6, 0, 0.5) !important;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* 4. Układ wewnątrz nagłówka */
+.header-inner {
+  position: relative;
+  z-index: 2;
+  padding-inline: 2rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px; /* Zapobiega zapadaniu się paska */
+}
+
+/* 5. Logo i teksty */
+.brand { display: flex; align-items: center; gap: 1rem !important; }
+.brand-mark svg { width: 46px !important; height: 46px !important; }
+.brand-text {
+  display: flex; flex-direction: column; line-height: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+}
+.brand-text .venol { font-family: var(--font-display); font-size: 0.8rem; color: #fff; letter-spacing: 0.1em; }
+.brand-text strong { font-family: 'Bebas Neue', var(--font-display); font-size: 1.6rem !important; color: #fff; letter-spacing: 0.05em; margin: 2px 0; }
+.brand-text .lodz { font-family: var(--font-display); font-size: 0.85rem; color: #fff; letter-spacing: 0.2em; }
+
+/* 6. Nawigacja i separatory */
+.primary-nav { display: flex; align-items: center; flex: 1; margin-left: 2rem; justify-content: space-between; }
+.primary-nav ul { display: flex; gap: 0 !important; margin: 0 !important; }
+.primary-nav ul li { position: relative; display: flex; align-items: center; }
+
+/* Pionowe kreski między linkami */
+.primary-nav ul li:not(:last-child)::after {
+  content: "|"; position: absolute; right: -2px; top: 50%;
+  transform: translateY(-60%); color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem; pointer-events: none;
+}
+
+.primary-nav a {
+  color: #e5e7eb !important; font-family: var(--font-body);
+  font-size: 0.7rem !important; font-weight: 600 !important;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 1.5rem 1rem !important; position: relative;
+  transition: color 0.3s; white-space: nowrap; display: flex; align-items: center;
+}
+.primary-nav a:hover { color: #fff !important; }
+
+/* 7. Aktywna zakładka - idealnie wyrównana z dolną linią */
+.primary-nav a.active { color: #fff !important; text-shadow: 0 0 8px rgba(225, 6, 0, 0.8); }
+.primary-nav a.active::after {
+  content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px;
+  background: var(--red);
+  box-shadow: 0 0 10px 2px rgba(225, 6, 0, 1), 0 0 20px 5px rgba(225, 6, 0, 0.6);
+  z-index: 10;
+}
+
+/* 8. Przycisk DOŁĄCZ */
+.nav-actions { display: flex; align-items: center; }
+.btn-nav-cta {
+  background: var(--red) !important; color: #fff !important;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.8rem 2.5rem !important;
+  font-family: var(--font-display); font-size: 0.9rem !important;
+  font-weight: 800 !important; text-transform: uppercase;
+  transform: skewX(-15deg); transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5); border: none;
+}
+.btn-nav-cta span { transform: skewX(15deg); display: inline-block; }
+.btn-nav-cta .arrow { margin-left: 0.5rem; font-size: 1.2rem; }
+.btn-nav-cta:hover { background: #b00400 !important; box-shadow: 0 0 25px rgba(225, 6, 0, 0.8); }
+
+/* 9. Poprawka Responsywności (naprawa błędnych klamer) */
+@media (max-width: 1400px) {
+  .primary-nav a { font-size: 0.65rem !important; padding: 1.5rem 0.7rem !important; }
+  .btn-nav-cta { padding: 0.7rem 1.5rem !important; font-size: 0.8rem !important; }
+}
+@media (max-width: 1200px) {
+  .primary-nav a { font-size: 0.6rem !important; padding: 1.5rem 0.5rem !important; }
+}
+@media (max-width: 900px) {
+  .nav-actions { display: none; }
+  .primary-nav {
+    position: fixed; top: 76px; left: 0; right: 0;
+    background: #050506 !important; flex-direction: column; padding: 1rem;
+    transform: translateY(-150%); transition: transform 0.3s;
+    border-bottom: 2px solid var(--red);
+  }
+  .primary-nav.open { transform: translateY(0); }
+  .primary-nav ul { flex-direction: column; width: 100%; gap: 0 !important; }
+  .primary-nav ul li:not(:last-child)::after { display: none; }
+  .primary-nav a { display: block; padding: 1rem !important; text-align: center; font-size: 0.9rem !important; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .primary-nav a.active::after { display: none; }
+}
+
+/* ============================================================
+   ANIMACJA SLIDERA (PŁYNNE PRZEJŚCIE)
+   ============================================================ */
+
+.hero-photo.slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.hero-photo.slider-img.active {
+  opacity: 0.8; /* Lekka przezroczystość, by tekst był czytelny */
+  z-index: 2;
+}
+
+.hero-overlay {
+  z-index: 3 !important; /* Gradient nad zdjęciami */
+  pointer-events: none;
+}
+
+.hero-content-wrapper {
+  z-index: 4 !important; /* Tekst nad wszystkim */
+}
+
+================================================================================
+PLIK: js\data.js
+ROZMIAR: 10133 bajtow
+--------------------------------------------------------------------------------
+/* =========================================================
+   ATOMOWKI_DATA - centralny plik danych.
+   Edytuj ten plik, aby zmienic tresci na stronie.
+   Brak fikcyjnych nazwisk, wynikow i terminow.
+   Wszystko, czego nie ma w zrodle, oznaczone jako [WERYFIKACJA].
+   ========================================================= */
+window.ATOMOWKI_DATA = {
+
+  /* ---------- HERO SLIDES (przygotowanie pod slider) ---------- */
+              heroSlides: [
+    { src:"", alt:"Slajd 1" },
+    { src:"", alt:"Slajd 2" },
+    { src:"", alt:"Slajd 3" },
+    { src:"", alt:"Slajd 4" }
+  ],
+
+  /* ---------- HISTORIA KLUBU ---------- */
+  history: [
+    { year:"2009", title:"Poczatki zenskiego rugby w Lodzi",
+      text:"Pierwsze treningi zenskiej sekcji BBRC Lodz. Powstaje zalazek druzyny, ktora z czasem stanie sie Atomowkami.",
+      image:"" },
+    { year:"2010", title:"Nazwa 'Atomowki'",
+      text:"Podczas obozu przed sezonem druzyna przyjmuje nazwe 'Atomowki'. Od tego momentu identyfikacja klubu jest juz wyrazna.",
+      image:"" },
+    { year:"od 2018", title:"Medale krajowego czempionatu mlodziezy",
+      text:"Sekcja mlodziezowa zdobywa siedem medali krajowego czempionatu (wedlug informacji opublikowanych w 2026 roku).",
+      image:"" },
+    { year:"2022", title:"Szesc powolan do reprezentacji Polski",
+      text:"W grudniu 2022 roku szesc zawodniczek Atomowek otrzymuje powolania na zgrupowanie reprezentacji mlodziezowych U18 i U16.",
+      image:"" },
+    { year:"2025", title:"Srebro I ligi seniorek i braz U16",
+      text:"Seniorki zdobywaja srebrny medal I ligi (final z AZS AWF Warszawa 10:19). Kategoria U16 zdobywa brazowy medal Mistrzostw Polski.",
+      image:"" },
+    { year:"2026", title:"Braz Mistrzostw Polski U16 i Puchar Polski U13",
+      text:"U16 ponownie na podium Mistrzostw Polski. U13 - w polaczonym zespole z RC Gorce Raba Nizna - zdobywa Puchar Polski.",
+      image:"" }
+  ],
+
+  /* ---------- TRENERZY I OSOBY ZWIAZANE Z KLUBEM ---------- */
+  coaches: [
+    { name:"Zbigniew Gradys", role:"Trener i menedzer Venol Atomowek Lodz",
+      note:"Postac wymieniana w dostepnych publikacjach klubu. Funkcja aktualna - do potwierdzenia przez klub [WERYFIKACJA].",
+      image:"" },
+    { name:"Angelika Kolodziejczyk", role:"Kapitan druzyny (2024)",
+      note:"Przedstawiana jako kapitan druzyny w 2024 roku. Aktualna funkcja do potwierdzenia [WERYFIKACJA].",
+      image:"" },
+    { name:"[Imie i nazwisko]", role:"[rola - do uzupelnienia]",
+      note:"Miejsce na kolejna osobe zwiazana z klubem.",
+      image:"" }
+  ],
+
+  /* ---------- REPREZENTACJA POLSKI ---------- */
+  nationalTeam: {
+    year:"2022",
+    event:"Zgrupowanie reprezentacji mlodziezowych (grudzien 2022)",
+    summary:"W grudniu 2022 roku szesc zawodniczek Venol Atomowek Lodz otrzymalo powolania na zgrupowanie reprezentacji mlodziezowych. Wedlug wypowiedzi trenera byl to wowczas najwiekszy udzial zawodniczek z jednego klubu wsrod powolanych.",
+    players: [
+      { name:"Weronika Rozniatowska", category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
+      { name:"Zuzanna Orlik",         category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
+      { name:"Klaudia Witonska",      category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
+      { name:"Emilia Gurzawska",      category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
+      { name:"Nina Klamka",           category:"U16", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U16.", image:"" },
+      { name:"Nikola Talkowska",      category:"U16", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U16 (wypozyczona z Arki Gdynia).", image:"" }
+    ]
+  },
+
+  /* ---------- SUKCESY ---------- */
+  successes: [
+    { date:"2025", category:"Seniorki - I liga", title:"Srebrny medal I ligi",
+      description:"Final I ligi: porazka z AZS AWF Warszawa 10:19. Srebrny medal dla seniorek Atomowek.",
+      image:"" },
+    { date:"2025", category:"Mistrzostwa Polski U16", title:"Brazowy medal Mistrzostw Polski U16",
+      description:"Brazowy medal kategorii U16 w 2025 roku.",
+      image:"" },
+    { date:"2026", category:"Mistrzostwa Polski U16", title:"Brazowy medal Mistrzostw Polski U16",
+      description:"Braz kategorii U16. Zwyciestwa: z RC Czestochowa 24:12, z Amazonkami Rugby Team 24:0, z Lwicami Olsztyn 20:14 w meczu decydujacym o medalu. Maria Stepien otrzymala wyroznienie dla najlepszej zawodniczki Atomowek w sezonie.",
+      image:"" },
+    { date:"2026", category:"Puchar Polski U13", title:"Puchar Polski U13 (zespol polaczony z RC Gorce Raba Nizna)",
+      description:"Zawodniczki Atomowek wystepowaly w polaczonym zespole z RC Gorce Raba Nizna. Final: zwyciestwo z RC Gryf Rotmanka 12:7.",
+      image:"" },
+    { date:"od 2018", category:"Mlodziez", title:"Siedem medali krajowego czempionatu sekcji mlodziezowej",
+      description:"Wedlug informacji opublikowanych w 2026 roku - siedem medali krajowego czempionatu sekcji mlodziezowej od 2018 roku.",
+      image:"" },
+    { date:"\u2014", category:"Miejsce na wpis", title:"Kolejny medal / puchar / nagroda",
+      description:"Miejsce na uzupelnienie przez klub.",
+      image:"" }
+  ],
+
+  /* ---------- SEZON 2026/2027 (turnieje) ---------- */
+  season2026: [
+    { date:"2026-09-06", name:"Turniej w Gdansku", league:"Ekstraliga", place:"6. miejsce",
+      matches:[
+        { home:"Atomowki Lodz", away:"Mazovia", scoreHome:"0", scoreAway:"40" },
+        { home:"Atomowki Lodz", away:"Bialo-Zielone Ladies", scoreHome:"0", scoreAway:"51" },
+        { home:"Atomowki Lodz", away:"AZS AWF Warszawa", scoreHome:"5", scoreAway:"33" }
+      ]
+    },
+    { date:"2026-09-20", name:"Turniej w Myslowicach", league:"I liga", place:"4. miejsce",
+      matches:[
+        { home:"Atomowki Lodz", away:"Diablice Ruda Slaska", scoreHome:"27", scoreAway:"10" }
+      ]
+    }
+  ],
+
+  /* ---------- ZAWODNICZKI ---------- */
+  players: [
+    { team:"senior", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki.", photo:"" },
+    { team:"senior", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki.", photo:"" },
+    { team:"senior", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki.", photo:"" },
+    { team:"senior", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki.", photo:"" },
+    { team:"u16", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U16.", photo:"" },
+    { team:"u16", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U16.", photo:"" },
+    { team:"u16", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U16.", photo:"" },
+    { team:"u13", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U13.", photo:"" },
+    { team:"u13", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U13.", photo:"" },
+    { team:"u13", name:"[Imie i nazwisko]", number:"\u2014", position:"[pozycja]", bio:"Miejsce na krotki opis zawodniczki U13.", photo:"" }
+  ],
+
+  /* ---------- AKTUALNOSCI ---------- */
+      news: [
+    { id:1, date:"2026-11-01", category:"klubowe", title:"Miejsce na tytul aktualnosci",
+      excerpt:"Krotki opis wpisu.",
+      body:"Pelna tresc wpisu.",
+      image:"" },
+    { id:2, date:"2026-11-02", category:"akademia", title:"Nabor do Akademii Atomowek",
+      excerpt:"Informacje o naborze do kategorii U13 i U16.",
+      body:"Szczegoly naboru.",
+      image:"" },
+    { id:3, date:"2026-11-03", category:"sukcesy", title:"Sukces Atomowek",
+      excerpt:"Krotki opis sukcesu.",
+      body:"Pelna tresc.",
+      image:"" }
+  ],
+
+  /* ---------- ROZGRYWKI ---------- */
+  matches: { upcoming: [], results: [] },
+  league: [],
+
+  /* ---------- GALERIA ---------- */
+      gallery: [],
+
+  /* ---------- AKADEMIA ---------- */
+  academy: {
+    training: [
+      { group:"U13", when:"[dzien i godzina - do potwierdzenia]", where:"[miejsce - do potwierdzenia]" },
+      { group:"U16", when:"[dzien i godzina - do potwierdzenia]", where:"[miejsce - do potwierdzenia]" },
+      { group:"Seniorska", when:"[dzien i godzina - do potwierdzenia]", where:"[miejsce - do potwierdzenia]" }
+    ],
+    faq: [
+      { q:"Jak dolaczyc do Atomowek?", a:"Napisz do klubu przez formularz kontaktowy lub profil w mediach spolecznosciowych. Szczegoly naboru do uzupelnienia." },
+      { q:"Czy trzeba miec doswiadczenie?", a:"Nie. Akademia prowadzi szkolenie od podstaw w kategoriach U13 i U16." },
+      { q:"W jakim wieku mozna zaczac?", a:"Kategorie mlodziezowe U13 i U16. Szczegoly wiekowe do potwierdzenia przez klub." },
+      { q:"Czy rugby jest bezpieczne dla dzieci?", a:"Szkolenie mlodziezy odbywa sie w kontrolowanych, bezpiecznych warunkach, zgodnie z zasadami rugby." },
+      { q:"Gdzie odbywaja sie treningi?", a:"Miejsce treningow do potwierdzenia - zobacz sekcje Treningi." }
+    ]
+  },
+
+  /* ---------- SPONSORZY I PARTNERZY ---------- */
+  sponsors: [
+    { name:"Venol", role:"Sponsor tytularny", status:"potwierdzony", url:"" },
+    { name:"BBRC Lodz", role:"Klub macierzysty", status:"potwierdzony", url:"" },
+    { name:"Miasto Lodz", role:"Partner publiczny", status:"do weryfikacji", url:"" },
+    { name:"MOSiR Lodz", role:"Partner publiczny", status:"do weryfikacji", url:"" },
+    { name:"Profilaktyka i Zdrowie", role:"Partner", status:"do weryfikacji", url:"" },
+    { name:"Ortoteam", role:"Partner", status:"do weryfikacji", url:"" },
+    { name:"Nordhorn", role:"Partner", status:"do weryfikacji", url:"" },
+    { name:"Lodzkie dla Ciebie", role:"Partner regionalny", status:"do weryfikacji", url:"" }
+  ]
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+PLIK: js\gallery.js
+ROZMIAR: 3165 bajtow
+--------------------------------------------------------------------------------
+/* =========================================================
+   gallery.js - siatka galerii + lightbox.
+   ========================================================= */
+(function () {
+  "use strict";
+  const grid = document.getElementById("galleryGrid");
+  if (!grid) return;
+
+  const D = window.ATOMOWKI_DATA || { gallery: [] };
+  const BASE = document.body.dataset.base || "";
+  let currentCat = "all";
+  let visibleItems = [];
+  let currentIndex = 0;
+
+  function render() {
+    visibleItems = (D.gallery || []).filter(function(g){ return currentCat === "all" || g.category === currentCat; });
+    grid.innerHTML = visibleItems.map(function(g, i){
+      return '<button class="gallery-item" data-gallery-index="' + i + '" aria-label="' + g.caption + '">' +
+        (g.src ? '<img src="' + BASE + g.src + '" alt="' + g.caption + '" loading="lazy">' : "MIEJSCE NA ZDJECIE") +
+        '<span class="gallery-cat">' + g.category + '</span>' +
+      '</button>';
+    }).join("");
+    grid.querySelectorAll("[data-gallery-index]").forEach(function(btn){
+      btn.addEventListener("click", function(){ openLightbox(Number(btn.dataset.galleryIndex)); });
+    });
+  }
+
+  const filters = document.getElementById("galleryFilters");
+  if (filters) {
+    filters.addEventListener("click", function(e){
+      const btn = e.target.closest(".filter");
+      if (!btn) return;
+      filters.querySelectorAll(".filter").forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      currentCat = btn.dataset.cat;
+      render();
+    });
+  }
+
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImage");
+  const lbCap = document.getElementById("lightboxCaption");
+  if (!lb || !lbImg) return;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLightbox() {
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+  function updateLightbox() {
+    const item = visibleItems[currentIndex];
+    if (!item) return;
+    lbImg.innerHTML = item.src
+      ? '<img src="' + BASE + item.src + '" alt="' + item.caption + '">'
+      : '<span>MIEJSCE NA ZDJECIE</span>';
+    lbCap.textContent = item.caption + ' (' + (currentIndex + 1) + '/' + visibleItems.length + ')';
+  }
+  function next() { currentIndex = (currentIndex + 1) % visibleItems.length; updateLightbox(); }
+  function prev() { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; updateLightbox(); }
+
+  lb.querySelector("[data-close-lightbox]").addEventListener("click", closeLightbox);
+  lb.querySelector("[data-lightbox-next]").addEventListener("click", next);
+  lb.querySelector("[data-lightbox-prev]").addEventListener("click", prev);
+  document.addEventListener("keydown", function(e){
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
+  });
+
+  render();
+})();
+================================================================================
+PLIK: js\main.js
+ROZMIAR: 21789 bajtow
+--------------------------------------------------------------------------------
+/* =========================================================
+   main.js - wspolna logika wszystkich podstron.
+   ========================================================= */
+(function () {
+  "use strict";
+  const D = window.ATOMOWKI_DATA || {};
+  const BASE = document.body.dataset.base || "";
+
+  const PAGES = [
+    { href:"index.html", label:"Strona glowna", key:"home" },
+    { href:"pages/o-klubie.html", label:"O klubie", key:"o-klubie" },
+    { href:"pages/historia.html", label:"Historia", key:"historia" },
+    { href:"pages/druzyna.html", label:"Druzyna", key:"druzyna" },
+    { href:"pages/reprezentacja.html", label:"Reprezentacja", key:"reprezentacja" },
+    { href:"pages/akademia.html", label:"Akademia", key:"akademia" },
+    { href:"pages/rozgrywki.html", label:"Rozgrywki", key:"rozgrywki" },
+    { href:"pages/sukcesy.html", label:"Sukcesy", key:"sukcesy" },
+    { href:"pages/aktualnosci.html", label:"Aktualnosci", key:"aktualnosci" },
+    { href:"pages/galeria.html", label:"Galeria", key:"galeria" },
+    { href:"pages/kontakt.html", label:"Kontakt", key:"kontakt" }
+  ];
+
+  function linkHref(href) {
+    if (BASE === "../") {
+      return href.indexOf("index.html") === 0 ? "../index.html" : "../" + href;
+    }
+    return href;
+  }
+
+      function injectHeader() {
+    const mount = document.getElementById("header-mount");
+    if (!mount) return;
+    const active = document.body.dataset.page;
+    const items = PAGES.map(function(p){
+      return '<li><a href="' + linkHref(p.href) + '"' + (p.key === active ? ' class="active"' : '') + '>' + p.label + '</a></li>';
+    }).join("");
+    mount.outerHTML =
+      '<header class="site-header" id="siteHeader">' +
+        '<div class="container-fluid header-inner">' +
+          '<a href="' + linkHref("index.html") + '" class="brand" aria-label="Atomowki Lodz - strona glowna">' +
+            '<span class="brand-mark" aria-hidden="true">' +
+              '<svg viewBox="0 0 64 64" width="44" height="44"><circle cx="32" cy="32" r="30" fill="#e10600"/><path d="M32 10 L38 28 L56 28 L42 40 L48 58 L32 46 L16 58 L22 40 L8 28 L26 28 Z" fill="#0b0b0d"/></svg>' +
+            '</span>' +
+            '<span class="brand-text"><strong>VENOL ATOMÓWKI</strong><small>ŁÓDŹ</small></span>' +
+          '</a>' +
+          '<button class="nav-toggle" id="navToggle" aria-label="Otworz menu" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>' +
+          '<nav class="primary-nav" id="primaryNav" aria-label="Menu glowne"><ul>' + items + '</ul>' +
+            '<div class="nav-actions">' +
+              '<a href="' + linkHref("pages/kontakt.html") + '#dolacz" class="btn-nav-cta">DOŁĄCZ <span class="arrow">&raquo;</span></a>' +
+              '<button class="nav-search" aria-label="Szukaj"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>' +
+            '</div>' +
+          '</nav>' +
+        '</div>' +
+      '</header>';
+  }
+
+  function injectFooter() {
+    const mount = document.getElementById("footer-mount");
+    if (!mount) return;
+    mount.outerHTML =
+      '<footer class="site-footer">' +
+        '<div class="container footer-grid">' +
+          '<div class="footer-brand">' +
+            '<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="36" height="36"><circle cx="32" cy="32" r="30" fill="#e10600"/><path d="M32 10 L38 28 L56 28 L42 40 L48 58 L32 46 L16 58 L22 40 L8 28 L26 28 Z" fill="#0b0b0d"/></svg></span>' +
+            '<p><strong>VENOL ATOMOWKI LODZ</strong><br />Kobieca druzyna rugby. Sila. Pasja. Druzyna.</p>' +
+          '</div>' +
+          '<div><h4>Menu</h4><ul class="footer-links">' +
+            '<li><a href="' + linkHref("pages/o-klubie.html") + '">O klubie</a></li>' +
+            '<li><a href="' + linkHref("pages/druzyna.html") + '">Druzyna</a></li>' +
+            '<li><a href="' + linkHref("pages/akademia.html") + '">Akademia</a></li>' +
+            '<li><a href="' + linkHref("pages/rozgrywki.html") + '">Rozgrywki</a></li>' +
+            '<li><a href="' + linkHref("pages/sukcesy.html") + '">Sukcesy</a></li>' +
+          '</ul></div>' +
+          '<div><h4>Kontakt</h4><ul class="footer-links">' +
+            '<li><a href="' + linkHref("pages/kontakt.html") + '">Formularz kontaktowy</a></li>' +
+            '<li><a href="mailto:kontakt@atomowki-lodz.pl">kontakt@atomowki-lodz.pl</a></li>' +
+            '<li><a href="#">Facebook</a></li>' +
+            '<li><a href="#">Strona BBRC Lodz</a></li>' +
+          '</ul></div>' +
+          '<div><h4>Informacje</h4><ul class="footer-links">' +
+            '<li><a href="' + linkHref("pages/kontakt.html") + '#polityka">Polityka prywatnosci</a></li>' +
+          '</ul></div>' +
+        '</div>' +
+        '<div class="container footer-bottom">' +
+          '<p>\u00A9 <span id="year"></span> Venol Atomowki Lodz. Wszelkie prawa zastrzezone.</p>' +
+          '<p>Dane kontaktowe wymagaja potwierdzenia przed publikacja.</p>' +
+        '</div>' +
+      '</footer>';
+  }
+
+  injectHeader();
+  injectFooter();
+
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+
+  const navToggle = document.getElementById("navToggle");
+  const primaryNav = document.getElementById("primaryNav");
+  if (navToggle && primaryNav) {
+    navToggle.addEventListener("click", function(){
+      const open = primaryNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+    primaryNav.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){
+        primaryNav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  const header = document.getElementById("siteHeader");
+  if (header) {
+    const onScroll = function(){ header.classList.toggle("scrolled", window.scrollY > 30); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  const revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add("visible"); });
+  }
+
+  const btt = document.getElementById("backToTop");
+  if (btt) {
+    window.addEventListener("scroll", function(){ btt.classList.toggle("show", window.scrollY > 500); }, { passive: true });
+    btt.addEventListener("click", function(){ window.scrollTo({ top: 0, behavior: "smooth" }); });
+  }
+
+  function bindModal(modal) {
+    if (!modal) return null;
+    const close = function(){ modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; };
+    modal.querySelectorAll("[data-close-modal]").forEach(function(el){ el.addEventListener("click", close); });
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape") close(); });
+    return { open: function(){ modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; }, close: close };
+  }
+
+    function newsCard(n) {
+    var imgSrc = n.image ? n.image : '';
+    return '<article class="news-card reveal">' +
+      '<div class="news-thumb"><img src="' + BASE + imgSrc + '" alt="' + n.title + '" loading="lazy"></div>' +
+      '<div class="news-body">' +
+        '<div class="news-meta"><span class="news-cat">' + n.category + '</span><time>' + n.date + '</time></div>' +
+        '<h3>' + n.title + '</h3>' +
+        '<p>' + n.excerpt + '</p>' +
+        '<button class="btn btn-ghost" data-news-id="' + n.id + '">Czytaj wiecej \u2192</button>' +
+      '</div>' +
+    '</article>';
+  }
+
+  function initNewsGrid() {
+    const grid = document.getElementById("newsGrid") || document.getElementById("homeNewsGrid");
+    if (!grid) return;
+    let currentCat = "all";
+    const render = function(){
+      const list = (D.news || []).filter(function(n){ return currentCat === "all" || n.category === currentCat; });
+      grid.innerHTML = list.length ? list.map(newsCard).join("") : '<p class="empty-note">Brak wpisow w tej kategorii.</p>';
+      grid.querySelectorAll(".reveal").forEach(function(el){ requestAnimationFrame(function(){ el.classList.add("visible"); }); });
+    };
+    render();
+
+    const filters = document.getElementById("newsFilters");
+    if (filters) {
+      filters.addEventListener("click", function(e){
+        const btn = e.target.closest(".filter");
+        if (!btn) return;
+        filters.querySelectorAll(".filter").forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentCat = btn.dataset.cat;
+        render();
+      });
+    }
+
+    const modal = document.getElementById("newsModal");
+    const modalBody = document.getElementById("newsModalBody");
+    if (modal && modalBody) {
+      const ctrl = bindModal(modal);
+      grid.addEventListener("click", function(e){
+        const btn = e.target.closest("[data-news-id]");
+        if (!btn) return;
+        const item = (D.news || []).find(function(n){ return String(n.id) === btn.dataset.newsId; });
+        if (!item) return;
+        modalBody.innerHTML =
+          '<div class="modal-photo">' + (item.image ? '<img src="' + BASE + item.image + '" alt="' + item.title + '">' : "MIEJSCE NA ZDJECIE") + '</div>' +
+          '<h2 id="newsModalTitle">' + item.title + '</h2>' +
+          '<div class="news-meta"><span class="news-cat">' + item.category + '</span><time>' + item.date + '</time></div>' +
+          '<p>' + (item.body || item.excerpt) + '</p>';
+        ctrl.open();
+      });
+    }
+  }
+
+  function initSuccess() {
+    const grid = document.getElementById("successGrid");
+    if (!grid) return;
+    grid.innerHTML = (D.successes || []).map(function(s){
+      return '<article class="success-card reveal">' +
+        '<div class="success-photo">' + (s.image ? '<img src="' + BASE + s.image + '" alt="' + s.title + '" loading="lazy">' : "MIEJSCE NA ZDJECIE") + '</div>' +
+        '<div class="success-body">' +
+          '<div class="success-meta"><span class="cat">' + s.category + '</span><time>' + s.date + '</time></div>' +
+          '<h3>' + s.title + '</h3>' +
+          '<p>' + s.description + '</p>' +
+        '</div>' +
+      '</article>';
+    }).join("");
+    grid.querySelectorAll(".reveal").forEach(function(el){ requestAnimationFrame(function(){ el.classList.add("visible"); }); });
+  }
+
+  function matchCard(m, isResult) {
+    return '<article class="match-card">' +
+      '<div class="match-teams"><span>' + m.home + '</span><span class="match-vs">' + (isResult ? "" : "VS") + '</span><span>' + m.away + '</span></div>' +
+      (isResult ? '<div class="match-score">' + m.scoreHome + ' : ' + m.scoreAway + '</div>' : '') +
+      '<div class="match-info">' +
+        '<span><strong>Data:</strong> ' + (m.date || "\u2014") + '</span>' +
+        '<span><strong>Turniej:</strong> ' + (m.tournament || "\u2014") + '</span>' +
+        '<span><strong>Miejsce:</strong> ' + (m.venue || "\u2014") + '</span>' +
+      '</div>' +
+    '</article>';
+  }
+
+  function initMatches() {
+    const up = document.getElementById("upcomingMatches");
+    const res = document.getElementById("recentResults");
+    const table = document.getElementById("leagueTable");
+    if (up) {
+      const list = (D.matches && D.matches.upcoming) || [];
+      up.innerHTML = list.length ? list.map(function(m){ return matchCard(m, false); }).join("") : '<p class="empty-note">Brak zaplanowanych meczow. Terminy edytujesz w ATOMOWKI_DATA.matches.upcoming.</p>';
+    }
+    if (res) {
+      const list = (D.matches && D.matches.results) || [];
+      res.innerHTML = list.length ? list.map(function(m){ return matchCard(m, true); }).join("") : '<p class="empty-note">Brak wynikow. Wyniki edytujesz w ATOMOWKI_DATA.matches.results.</p>';
+    }
+    if (table) {
+      const tbody = table.querySelector("tbody");
+      const list = D.league || [];
+      tbody.innerHTML = list.length ? list.map(function(r, i){
+        return '<tr><td>' + (i + 1) + '</td><td>' + r.team + '</td><td>' + (r.played != null ? r.played : "\u2014") + '</td><td>' + (r.wins != null ? r.wins : "\u2014") + '</td><td>' + (r.losses != null ? r.losses : "\u2014") + '</td><td>' + (r.points != null ? r.points : "\u2014") + '</td></tr>';
+      }).join("") : '<tr><td colspan="6">Tabela do uzupelnienia w ATOMOWKI_DATA.league.</td></tr>';
+    }
+  }
+
+  function initAcademy() {
+    const tl = document.getElementById("trainingList");
+    if (tl) {
+      const list = (D.academy && D.academy.training) || [];
+      tl.innerHTML = list.map(function(t){ return '<div class="training-card"><h3>' + t.group + '</h3><p><strong>Kiedy:</strong> ' + t.when + '<br><strong>Gdzie:</strong> ' + t.where + '</p></div>'; }).join("");
+    }
+    const faq = document.getElementById("faqList");
+    if (faq) {
+      const list = (D.academy && D.academy.faq) || [];
+      faq.innerHTML = list.map(function(f, i){
+        return '<div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="faq-a-' + i + '">' + f.q + '</button><div class="faq-a" id="faq-a-' + i + '"><p>' + f.a + '</p></div></div>';
+      }).join("");
+      faq.querySelectorAll(".faq-q").forEach(function(btn){
+        btn.addEventListener("click", function(){
+          const item = btn.parentElement;
+          const answer = item.querySelector(".faq-a");
+          const isOpen = item.classList.toggle("open");
+          btn.setAttribute("aria-expanded", String(isOpen));
+          answer.style.maxHeight = isOpen ? answer.scrollHeight + "px" : "0";
+        });
+      });
+    }
+  }
+
+  function initContactForm() {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+    const note = document.getElementById("formNote");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const required = ["name", "email", "topic", "message", "rodo"];
+      let ok = true;
+      required.forEach(function(n){
+        const el = form.elements[n];
+        if (!el) return;
+        const valid = el.type === "checkbox" ? el.checked : String(el.value).trim() !== "";
+        if (!valid) { ok = false; el.style.borderColor = "#ff6b63"; }
+        else el.style.borderColor = "";
+      });
+      if (!ok) {
+        note.textContent = "Uzupelnij wszystkie wymagane pola (w tym zgode).";
+        note.className = "form-note err";
+        return;
+      }
+      note.textContent = "Formularz jest przygotowany, ale nie wysyla wiadomosci bez backendu. Skonfiguruj usluge (np. Formspree) lub napisz na kontakt@atomowki-lodz.pl.";
+      note.className = "form-note ok";
+      form.reset();
+    });
+  }
+
+  initNewsGrid();
+  initSuccess();
+  initMatches();
+  initAcademy();
+  initContactForm();
+  initHistory();
+  initCoaches();
+  initNationalTeam();
+  initSeason();
+  initSponsors();
+
+
+  /* ============================================================
+     MODUL C — renderowanie nowych sekcji (historia, reprezentacja,
+     trenerzy, sezon, sponsorzy)
+     ============================================================ */
+
+  function initHistory() {
+    const el = document.getElementById('historyTimeline');
+    if (!el) return;
+    const list = (D.history || []);
+    el.innerHTML = list.map(function(h){
+      return '<div class="timeline-fancy-item reveal">' +
+        '<div class="tf-content"><h3>' + h.title + '</h3><p>' + h.text + '</p></div>' +
+        '<div class="tf-dot"><span>' + h.year + '</span></div>' +
+        '<div class="tf-photo">' + (h.image ? '<img src="' + BASE + h.image + '" alt="' + h.title + '" loading="lazy">' : 'ZDJECIE') + '</div>' +
+      '</div>';
+    }).join('');
+    el.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
+  }
+
+  function initCoaches() {
+    const el = document.getElementById('coachesGrid');
+    if (!el) return;
+    const list = (D.coaches || []);
+    el.innerHTML = list.map(function(c){
+      return '<article class="coach-card reveal">' +
+        '<div class="coach-photo">' + (c.image ? '<img src="' + BASE + c.image + '" alt="' + c.name + '" loading="lazy">' : 'ZDJECIE') + '</div>' +
+        '<div class="coach-body">' +
+          '<h3>' + c.name + '</h3>' +
+          '<span class="coach-role">' + c.role + '</span>' +
+          '<p class="coach-note">' + c.note + '</p>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+    el.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
+  }
+
+  function initNationalTeam() {
+    // pełna lista — pages/reprezentacja.html
+    const full = document.getElementById('nationalGrid');
+    // skrót — index.html (pierwsze 3)
+    const mini = document.getElementById('nationalMini');
+    const nt = D.nationalTeam || { players: [] };
+    const players = nt.players || [];
+
+        function cardHtml(p) {
+      var imgSrc = p.image ? p.image : '';
+      return '<article class="national-card reveal">' +
+        '<div class="nat-photo"><img src="' + BASE + imgSrc + '" alt="' + p.name + '" loading="lazy"></div>' +
+        '<span class="nat-badge">' + p.category + '</span>' +
+        '<div class="nat-body">' +
+          '<h3>' + p.name + '</h3>' +
+          '<span class="nat-year">Powolanie ' + p.year + '</span>' +
+          '<p class="nat-note">' + p.note + '</p>' +
+        '</div>' +
+      '</article>';
+    }
+
+    if (full) {
+      full.innerHTML = players.map(cardHtml).join('');
+      full.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
+    }
+    if (mini) {
+      mini.innerHTML = players.slice(0, 3).map(cardHtml).join('');
+      mini.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
+    }
+  }
+
+  function initSeason() {
+    const el = document.getElementById('seasonGrid');
+    if (!el) return;
+    const list = (D.season2026 || []);
+    el.innerHTML = list.map(function(s){
+      const matches = (s.matches || []).map(function(m){
+        const isWin = parseInt(m.scoreHome, 10) > parseInt(m.scoreAway, 10);
+        const cls = isWin ? 'win' : 'loss';
+        return '<div class="season-match">' +
+          '<span>' + m.home + ' vs ' + m.away + '</span>' +
+          '<span class="score ' + cls + '">' + m.scoreHome + ' : ' + m.scoreAway + '</span>' +
+        '</div>';
+      }).join('');
+      return '<article class="season-card reveal">' +
+        '<h3>' + s.name + '</h3>' +
+        '<div class="season-meta"><span>' + s.date + '</span><span>' + s.league + '</span><span class="place">' + s.place + '</span></div>' +
+        matches +
+      '</article>';
+    }).join('');
+    el.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
+  }
+
+  function initSponsors() {
+    const el = document.getElementById('sponsorGrid');
+    if (!el) return;
+    const list = (D.sponsors || []);
+    el.innerHTML = list.map(function(s){
+      const isOk = s.status === 'potwierdzony';
+      const cls = isOk ? 'ok' : 'pending';
+      const label = isOk ? 'Potwierdzony' : 'Do weryfikacji';
+      const inner = '<span class="sp-name">' + s.name + '</span>' +
+                    '<span class="sp-role">' + s.role + '</span>' +
+                    '<span class="sp-status ' + cls + '">' + label + '</span>';
+      return s.url
+        ? '<a class="sponsor-pro" href="' + s.url + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<div class="sponsor-pro">' + inner + '</div>';
+    }).join('');
+  }
+  window.ATOMOWKI_UI = { bindModal: bindModal, BASE: BASE };
+
+  
+
+  
+
+
+  
+
+  // Uruchamiamy
+  initHeroSlider();
+
+
+  // ============================================================
+  // SLIDER HERO - LOGIKA STRZAŁEK I KROPEK
+  // ============================================================
+  function initHeroSlider() {
+    const imgs = document.querySelectorAll('.hero-media .slider-img');
+    if (!imgs.length) return;
+
+    const dotsContainer = document.querySelector('.slider-dots');
+    const prevBtn = document.querySelector('.slider-arrow.prev');
+    const nextBtn = document.querySelector('.slider-arrow.next');
+    
+    let current = 0;
+
+    // Generujemy kropki
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      imgs.forEach(function(_, i) {
+        const dot = document.createElement('span');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', function() { goToSlide(i); });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function goToSlide(index) {
+      if (index < 0) index = imgs.length - 1;
+      if (index >= imgs.length) index = 0;
+      imgs[current].classList.remove('active');
+      current = index;
+      imgs[current].classList.add('active');
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.dot').forEach(function(d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function() { goToSlide(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { goToSlide(current + 1); });
+
+    // Automatyczne przewijanie
+    setInterval(function() {
+      goToSlide(current + 1);
+    }, 5000);
+  }
+
+  // Uruchamiamy slider
+  initHeroSlider();
+
+})();
+
+
+================================================================================
+PLIK: js\players.js
+ROZMIAR: 3197 bajtow
+--------------------------------------------------------------------------------
+/* =========================================================
+   players.js - karty zawodniczek + modal szczegolow.
+   ========================================================= */
+(function () {
+  "use strict";
+  const grid = document.getElementById("playersGrid");
+  if (!grid) return;
+
+  const D = window.ATOMOWKI_DATA || { players: [] };
+  const BASE = document.body.dataset.base || "";
+  let currentTeam = "senior";
+
+  function render() {
+    const list = (D.players || []).filter(function(p){ return p.team === currentTeam; });
+    if (!list.length) {
+      grid.innerHTML = '<p class="empty-note">Brak zawodniczek w tej kategorii. Uzupelnij dane w ATOMOWKI_DATA.players.</p>';
+      return;
+    }
+    grid.innerHTML = list.map(function(p, i){
+      return '<button class="player-card reveal" data-player-index="' + i + '" aria-label="Pokaz profil: ' + p.name + '">' +
+        '<div class="player-photo">' +
+          (p.photo ? '<img src="' + BASE + p.photo + '" alt="' + p.name + '" loading="lazy">' : "MIEJSCE NA ZDJECIE") +
+          '<span class="player-number">' + p.number + '</span>' +
+        '</div>' +
+        '<div class="player-info"><h3>' + p.name + '</h3><span class="player-pos">' + p.position + '</span></div>' +
+      '</button>';
+    }).join("");
+
+    grid.querySelectorAll(".reveal").forEach(function(el){ requestAnimationFrame(function(){ el.classList.add("visible"); }); });
+
+    grid.querySelectorAll("[data-player-index]").forEach(function(btn){
+      btn.addEventListener("click", function(){ openPlayer(list[Number(btn.dataset.playerIndex)]); });
+    });
+  }
+
+  const modal = document.getElementById("playerModal");
+  const body = document.getElementById("playerModalBody");
+  let ctrl = null;
+  if (modal && body) {
+    const close = function(){ modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; };
+    modal.querySelectorAll("[data-close-modal]").forEach(function(el){ el.addEventListener("click", close); });
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape") close(); });
+    ctrl = { open: function(){ modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; } };
+  }
+
+  function openPlayer(p) {
+    if (!p || !ctrl) return;
+    body.innerHTML =
+      '<div class="modal-photo">' + (p.photo ? '<img src="' + BASE + p.photo + '" alt="' + p.name + '">' : "MIEJSCE NA ZDJECIE ZAWODNICZKI") + '</div>' +
+      '<h2 id="playerModalTitle">' + p.name + '</h2>' +
+      '<p><strong>Numer:</strong> ' + p.number + ' &nbsp;\u00B7&nbsp; <strong>Pozycja:</strong> ' + p.position + '</p>' +
+      '<p>' + (p.bio || "Opis do uzupelnienia.") + '</p>';
+    ctrl.open();
+  }
+
+  document.querySelectorAll(".tab[data-team]").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".tab[data-team]").forEach(function(t){
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+      currentTeam = tab.dataset.team;
+      render();
+    });
+  });
+
+  render();
+})();
+================================================================================
+PLIK: pages\akademia.html
+ROZMIAR: 4029 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akademia Atomówek – U13 i U16 | Venol Atomówki Łódź</title>
+  <meta name="description" content="Akademia Atomówek w Łodzi: kategorie U13 i U16. Treningi, korzyści z rugby, informacje dla rodziców i FAQ. Dołącz do drużyny." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/akademia.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="akademia" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Akademia</p>
+        <h1 class="page-title">Zacznij grać w rugby</h1>
+        <p class="page-lead">Szkolenie młodzieży w kategoriach U13 i U16. Bezpiecznie, zespołowo, z pasją.</p>
+        <a href="kontakt.html#dolacz" class="btn btn-primary btn-lg">DOŁĄCZ DO ATOMÓWEK</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="info-card reveal">
+          <h2>U13</h2>
+          <p>Wprowadzenie do rugby w formie zabawy i podstaw techniki. Rozwój koordynacji, współpracy i pewności siebie.</p>
+          <ul class="check-list">
+            <li>Treningi dostosowane do wieku</li>
+            <li>Bezpieczne, kontrolowane formy kontaktu</li>
+            <li>Nacisk na współpracę i szacunek</li>
+          </ul>
+        </article>
+        <article class="info-card reveal delay-1">
+          <h2>U16</h2>
+          <p>Rozwój techniki rugby 7, przygotowanie do rozgrywek młodzieżowych i seniorskich.</p>
+          <ul class="check-list">
+            <li>Taktyka i technika rugby 7</li>
+            <li>Przygotowanie fizyczne</li>
+            <li>Udział w turniejach młodzieżowych</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Treningi</h2>
+        <p class="section-lead">Informacje o treningach edytujesz w pliku <code>js/data.js</code> (tablica <code>ATOMOWKI_DATA.academy.training</code>).</p>
+        <div id="trainingList" class="training-list reveal"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Dlaczego rugby?</h2>
+        <div class="values-grid">
+          <article class="value-card reveal"><h3>Sprawność</h3><p>Siła, szybkość i koordynacja.</p></article>
+          <article class="value-card reveal delay-1"><h3>Pewność siebie</h3><p>Pokonywanie własnych ograniczeń.</p></article>
+          <article class="value-card reveal delay-2"><h3>Drużyna</h3><p>Współpraca i odpowiedzialność.</p></article>
+          <article class="value-card reveal delay-3"><h3>Charakter</h3><p>Szacunek do przeciwnika i sędziego.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Informacje dla rodziców</h2>
+        <p>Klub prowadzi szkolenie młodzieży w kontrolowanych, bezpiecznych warunkach, zgodnie z zasadami rugby. W razie pytań prosimy o kontakt z klubem.</p>
+        <p class="hint">Sekcja „Informacje dla rodziców” gotowa do uzupełnienia treścią przez klub.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\aktualnosci.html
+ROZMIAR: 2291 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktualności – Venol Atomówki Łódź</title>
+  <meta name="description" content="Aktualności klubowe, wyniki, turnieje, akademia i sukcesy Venol Atomówki Łódź." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/aktualnosci.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="aktualnosci" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Aktualności</p>
+        <h1 class="page-title">Portal Atomówek</h1>
+        <p class="page-lead">Klub, wyniki, turnieje, akademia, sukcesy.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="newsFilters" role="group" aria-label="Filtry kategorii">
+          <button class="filter active" data-cat="all">Wszystkie</button>
+          <button class="filter" data-cat="klubowe">Klubowe</button>
+          <button class="filter" data-cat="wyniki">Wyniki</button>
+          <button class="filter" data-cat="turnieje">Turnieje</button>
+          <button class="filter" data-cat="akademia">Akademia</button>
+          <button class="filter" data-cat="sukcesy">Sukcesy</button>
+        </div>
+        <div id="newsGrid" class="news-grid"></div>
+      </div>
+    </section>
+
+    <div class="modal" id="newsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Zamknij">×</button>
+        <div class="modal-body" id="newsModalBody"></div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\druzyna.html
+ROZMIAR: 2370 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drużyna – Venol Atomówki Łódź</title>
+  <meta name="description" content="Zawodniczki Venol Atomówki Łódź: seniorska drużyna, U16, U13. Karty zawodniczek z numerami i pozycjami." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/druzyna.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="druzyna" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Drużyna</p>
+        <h1 class="page-title">Zawodniczki Atomówek</h1>
+        <p class="page-lead">Poznaj skład seniorski oraz drużyny młodzieżowe U16 i U13.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Kategorie drużyn">
+          <button class="tab active" role="tab" aria-selected="true" data-team="senior">Seniorska</button>
+          <button class="tab" role="tab" aria-selected="false" data-team="u16">U16</button>
+          <button class="tab" role="tab" aria-selected="false" data-team="u13">U13</button>
+        </div>
+        <div id="playersGrid" class="players-grid" aria-live="polite"></div>
+        <p class="hint">Dane edytujesz w pliku <code>js/data.js</code> (tablica <code>ATOMOWKI_DATA.players</code>).</p>
+      </div>
+    </section>
+
+    <div class="modal" id="playerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="playerModalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Zamknij">×</button>
+        <div class="modal-body" id="playerModalBody"></div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/players.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\galeria.html
+ROZMIAR: 2727 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria – Venol Atomówki Łódź</title>
+  <meta name="description" content="Galeria zdjęć Venol Atomówki Łódź: mecze, treningi, turnieje, drużyna, akademia, życie klubowe." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/galeria.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="galeria" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Galeria</p>
+        <h1 class="page-title">Zdjęcia Atomówek</h1>
+        <p class="page-lead">Mecze, treningi, turnieje, drużyna, akademia, życie klubowe.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="galleryFilters" role="group" aria-label="Kategorie galerii">
+          <button class="filter active" data-cat="all">Wszystkie</button>
+          <button class="filter" data-cat="mecze">Mecze</button>
+          <button class="filter" data-cat="treningi">Treningi</button>
+          <button class="filter" data-cat="turnieje">Turnieje</button>
+          <button class="filter" data-cat="druzyna">Drużyna</button>
+          <button class="filter" data-cat="akademia">Akademia</button>
+          <button class="filter" data-cat="zycie">Życie klubowe</button>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <p class="hint">Zdjęcia dodajesz w <code>ATOMOWKI_DATA.gallery</code>. Miejsca bez zdjęć są oznaczone.</p>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="lightbox-close" data-close-lightbox aria-label="Zamknij">×</button>
+      <button class="lightbox-prev" data-lightbox-prev aria-label="Poprzednie">‹</button>
+      <figure class="lightbox-figure">
+        <div id="lightboxImage" class="lightbox-image"></div>
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-next" data-lightbox-next aria-label="Następne">›</button>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/gallery.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\historia.html
+ROZMIAR: 3777 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia i ludzie klubu – Venol Atomówki Łódź</title>
+  <meta name="description" content="Pełna historia Venol Atomówek Łódź – od pierwszych treningów w 2009 roku, przez nazwę Atomówki w 2010, po medale i sukcesy. Trenerzy i osoby związane z klubem." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/historia.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="historia" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Historia i ludzie klubu</p>
+        <h1 class="page-title">Atomówki — energia, która trwa od 2009</h1>
+        <p class="page-lead">Od pierwszych treningów żeńskiej sekcji BBRC Łódź, przez narodziny nazwy „Atomówki” w 2010 roku, po medale i reprezentantki Polski.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Oś czasu</p>
+        <h2 class="section-title">Najważniejsze momenty</h2>
+        <p class="section-lead">Wybrane wydarzenia z historii klubu. Oś czasu rozbudowywana wraz z kolejnymi potwierdzonymi informacjami.</p>
+        <div id="historyTimeline" class="timeline-fancy" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Trenerzy i osoby związane z klubem</p>
+        <h2 class="section-title">Ludzie Atomówek</h2>
+        <p class="section-lead">Osoby, które tworzyły i tworzą klub. Funkcje oznaczone jako wymagające potwierdzenia nie są prezentowane jako aktualne bez weryfikacji przez klub.</p>
+        <div id="coachesGrid" class="coach-grid" aria-live="polite"></div>
+        <p class="hint">Dane edytujesz w <code>js/data.js</code> → <code>ATOMOWKI_DATA.coaches</code>. Kolejne osoby dodawaj jako nowe obiekty w tablicy.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Reprezentacja Polski</p>
+        <h2 class="section-title">Atomówki w reprezentacji</h2>
+        <p class="section-lead">W grudniu 2022 roku sześć zawodniczek Atomówek otrzymało powołania na zgrupowanie reprezentacji młodzieżowych U18 i U16.</p>
+        <a href="reprezentacja.html" class="btn btn-primary">ZOBACZ REPREZENTANTKI →</a>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Sukcesy</p>
+        <h2 class="section-title">Trofea i osiągnięcia</h2>
+        <p class="section-lead">Medale seniorek, U16 i U13 – pełne archiwum sukcesów.</p>
+        <a href="sukcesy.html" class="btn btn-outline">ZOBACZ SUKCESY →</a>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box reveal">
+        <div>
+          <h2 class="section-title">Chcesz dołączyć do Atomówek?</h2>
+          <p>Akademia U13 i U16 oraz drużyna seniorska – zapraszamy.</p>
+        </div>
+        <a href="akademia.html" class="btn btn-primary btn-lg">AKADEMIA ATOMÓWEK</a>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\kontakt.html
+ROZMIAR: 3773 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Venol Atomówki Łódź</title>
+  <meta name="description" content="Kontakt z Venol Atomówki Łódź. Formularz, dane klubu, mapa, linki do mediów społecznościowych. Informacje o naborze do Akademii." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/kontakt.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="kontakt" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Kontakt</p>
+        <h1 class="page-title">Napisz do nas</h1>
+        <p class="page-lead">Dane kontaktowe wymagają potwierdzenia przed publikacją.</p>
+      </div>
+    </section>
+
+    <section class="section" id="dolacz">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h2 class="section-title">Dane klubu</h2>
+          <ul class="contact-list">
+            <li><strong>Adres:</strong> <span>do potwierdzenia (Łódź)</span></li>
+            <li><strong>Telefon:</strong> <span>do potwierdzenia</span></li>
+            <li><strong>E-mail:</strong> <a href="mailto:kontakt@atomowki-lodz.pl">kontakt@atomowki-lodz.pl</a> <small>(placeholder)</small></li>
+            <li><strong>Facebook:</strong> <a href="#" rel="noopener">profil do uzupełnienia</a></li>
+            <li><strong>Strona klubu:</strong> <a href="#" rel="noopener">link do uzupełnienia</a></li>
+          </ul>
+          <div class="map-placeholder" aria-label="Miejsce na mapę">MIEJSCE NA MAPĘ<br /><small>np. osadzenie Google Maps / OpenStreetMap</small></div>
+        </div>
+        <div class="reveal delay-1">
+          <h2 class="section-title">Formularz kontaktowy</h2>
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>Imię i nazwisko<input type="text" name="name" required autocomplete="name" /></label>
+            <label>Adres e-mail<input type="email" name="email" required autocomplete="email" /></label>
+            <label>Temat<select name="topic" required><option value="">— wybierz —</option><option>Nabór do Akademii</option><option>Współpraca / sponsoring</option><option>Media</option><option>Inne</option></select></label>
+            <label>Treść wiadomości<textarea name="message" rows="5" required></textarea></label>
+            <label class="checkbox"><input type="checkbox" name="rodo" required /> Wyrażam zgodę na przetwarzanie danych w celu odpowiedzi na wiadomość.</label>
+            <button type="submit" class="btn btn-primary">WYŚLIJ</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            <p class="hint">Formularz nie wysyła wiadomości bez backendu. Połączenie z usługą (np. Formspree) wymaga konfiguracji.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="polityka">
+      <div class="container">
+        <h2 class="section-title">Polityka prywatności (skrót)</h2>
+        <p>Miejsce na pełną politykę prywatności klubu. Formularz kontaktowy wymaga zgody na przetwarzanie danych. Treść polityki do uzupełnienia przez klub.</p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\o-klubie.html
+ROZMIAR: 4378 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O klubie – Venol Atomówki Łódź</title>
+  <meta name="description" content="Historia kobiecej sekcji rugby w Łodzi. Atomówki od 2009 roku, nazwa od 2010. Rozwój rugby kobiet i młodzieży w BBRC Łódź." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/o-klubie.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="o-klubie" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">O klubie</p>
+        <h1 class="page-title">Atomówki — energia, która gra</h1>
+        <p class="page-lead">Kobieca sekcja rugby w Łodzi. Historia, wartości i rozwój od 2009 roku.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="reveal">
+          <h2 class="section-title">Kim jesteśmy</h2>
+          <p>Venol Atomówki Łódź to kobieca drużyna rugby związana z <strong>BBRC Łódź</strong>. Klub rozwija kobiece rugby w Łodzi, uczestniczy w krajowych rozgrywkach rugby 7 i prowadzi szkolenie młodzieży.</p>
+          <p>Historia żeńskiej sekcji sięga <strong>2009 roku</strong>. Nazwa „Atomówki” pojawiła się w <strong>2010 roku</strong> i towarzyszy drużynie do dziś.</p>
+        </div>
+        <div class="reveal delay-1 info-card">
+          <h3>W liczbach</h3>
+          <ul class="stats-list">
+            <li><strong>2009</strong><span>początek sekcji</span></li>
+            <li><strong>2010</strong><span>nazwa Atomówki</span></li>
+            <li><strong>U13 / U16</strong><span>kategorie młodzieżowe</span></li>
+            <li><strong>Rugby 7</strong><span>krajowe rozgrywki</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Historia</p>
+        <h2 class="section-title">Oś czasu</h2>
+        <ol class="timeline">
+          <li class="reveal"><span class="year">2009</span><div><h3>Powstanie sekcji</h3><p>Początek historii kobiecego rugby w łódzkim klubie.</p></div></li>
+          <li class="reveal delay-1"><span class="year">2010</span><div><h3>Nazwa „Atomówki”</h3><p>Drużyna przyjmuje nazwę, która staje się jej znakiem rozpoznawczym.</p></div></li>
+          <li class="reveal delay-2"><span class="year">od 2018</span><div><h3>Medale młodzieżowe</h3><p>Siedem medali krajowego czempionatu sekcji młodzieżowej – według informacji opublikowanych w 2026 roku.</p></div></li>
+          <li class="reveal delay-3"><span class="year">2026</span><div><h3>Brąz Mistrzostw Polski U16</h3><p>Potwierdzony sukces kategorii U16.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container values-grid">
+        <article class="value-card reveal"><h3>Siła</h3><p>Rugby wymaga fizyczności i charakteru. Uczymy odwagi w bezpiecznych warunkach.</p></article>
+        <article class="value-card reveal delay-1"><h3>Pasja</h3><p>Treningi i mecze to energia, która napędza drużynę.</p></article>
+        <article class="value-card reveal delay-2"><h3>Drużyna</h3><p>Rugby to sport zespołowy – na boisku i poza nim.</p></article>
+        <article class="value-card reveal delay-3"><h3>Łódź</h3><p>Jesteśmy lokalną drużyną z łódzką tożsamością.</p></article>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box reveal">
+        <div>
+          <h2 class="section-title">Chcesz dołączyć?</h2>
+          <p>Zapraszamy do Akademii Atomówek – U13 i U16.</p>
+        </div>
+        <a href="akademia.html" class="btn btn-primary btn-lg">AKADEMIA ATOMÓWEK</a>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\reprezentacja.html
+ROZMIAR: 4038 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reprezentantki Polski – Venol Atomówki Łódź</title>
+  <meta name="description" content="Atomówki w reprezentacji Polski. W grudniu 2022 roku sześć zawodniczek Venol Atomówek Łódź otrzymało powołania na zgrupowanie reprezentacji młodzieżowych U18 i U16." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/reprezentacja.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="reprezentacja" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Reprezentacja Polski</p>
+        <h1 class="page-title">ATOMÓWKI W REPREZENTACJI POLSKI</h1>
+        <p class="page-lead">Zawodniczki Venol Atomówek Łódź w reprezentacjach młodzieżowych Polski.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="national-hero reveal">
+          <h2>Grudzień 2022 — sześć powołań</h2>
+          <p>W grudniu 2022 roku sześć zawodniczek Venol Atomówek Łódź otrzymało powołania na zgrupowanie reprezentacji młodzieżowych U18 i U16. Według wypowiedzi trenera był to wówczas największy udział zawodniczek z jednego klubu wśród powołanych na to zgrupowanie.</p>
+        </div>
+        <div id="nationalGrid" class="national-grid" aria-live="polite"></div>
+        <p class="hint">Dane edytujesz w <code>js/data.js</code> → <code>ATOMOWKI_DATA.nationalTeam.players</code>. Kolejne powołania dodawaj jako nowe obiekty w tablicy.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Rozwój</p>
+        <h2 class="section-title">Od młodzieży do reprezentacji</h2>
+        <p class="section-lead">Klub prowadzi szkolenie młodzieżowe w kategoriach U13 i U16, a zawodniczki rozwijają się od pierwszych treningów aż do drużyny seniorskiej i reprezentacji Polski.</p>
+        <div class="grid-2" style="margin-top:2rem">
+          <article class="info-card reveal">
+            <h3>Akademia U13 i U16</h3>
+            <p>Dla dziewcząt, które chcą rozpocząć przygodę z rugby lub rozwijać swoje umiejętności w bezpiecznych warunkach.</p>
+            <a href="akademia.html" class="btn btn-primary">AKADEMIA →</a>
+          </article>
+          <article class="info-card reveal delay-1">
+            <h3>Drużyna seniorska</h3>
+            <p>Kolejny krok po akademiach — starty w rozgrywkach krajowych, w tym rugby 7.</p>
+            <a href="druzyna.html" class="btn btn-outline">ZOBACZ DRUŻYNĘ →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Sukcesy</p>
+        <h2 class="section-title">Medale i trofea</h2>
+        <p class="section-lead">Pełne archiwum osiągnięć klubu — seniorki, U16, U13 i wyróżnienia indywidualne.</p>
+        <a href="sukcesy.html" class="btn btn-outline">ZOBACZ SUKCESY →</a>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box reveal">
+        <div>
+          <h2 class="section-title">Chcesz dołączyć do Atomówek?</h2>
+          <p>Akademia U13 i U16 oraz drużyna seniorska — zapraszamy.</p>
+        </div>
+        <a href="akademia.html" class="btn btn-primary btn-lg">DOŁĄCZ DO ATOMÓWEK</a>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\rozgrywki.html
+ROZMIAR: 2223 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rozgrywki i wyniki – Venol Atomówki Łódź</title>
+  <meta name="description" content="Najbliższe mecze, ostatnie wyniki i tabele rozgrywek Venol Atomówki Łódź. Dane edytowalne w pliku js/data.js." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/rozgrywki.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="rozgrywki" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Rozgrywki</p>
+        <h1 class="page-title">Mecze, wyniki, tabele</h1>
+        <p class="page-lead">Aktualne informacje sportowe. Dane edytowalne w <code>js/data.js</code>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Najbliższe mecze i turnieje</h2>
+        <div id="upcomingMatches" class="match-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Ostatnie wyniki</h2>
+        <div id="recentResults" class="match-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Tabela rozgrywek</h2>
+        <div class="table-wrap">
+          <table class="league-table" id="leagueTable">
+            <thead><tr><th>#</th><th>Drużyna</th><th>M</th><th>W</th><th>P</th><th>Pkt</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="hint">Dane tabeli edytowalne w <code>ATOMOWKI_DATA.league</code>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+================================================================================
+PLIK: pages\sukcesy.html
+ROZMIAR: 1518 bajtow
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sukcesy i trofea – Venol Atomówki Łódź</title>
+  <meta name="description" content="Osiągnięcia Venol Atomówki Łódź: brąz Mistrzostw Polski U16 2026, medale młodzieżowe od 2018. Archiwum sukcesów." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/sukcesy.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="sukcesy" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Sukcesy</p>
+        <h1 class="page-title">Trofea i osiągnięcia</h1>
+        <p class="page-lead">Potwierdzone sukcesy klubu oraz miejsce na kolejne wpisy.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div id="successGrid" class="success-grid"></div>
+        <p class="hint">Dane edytowalne w <code>ATOMOWKI_DATA.successes</code>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
