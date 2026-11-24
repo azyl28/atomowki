@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktualności – Venol Atomówki Łódź</title>
+  <meta name="description" content="Aktualności klubowe, wyniki, turnieje, akademia i sukcesy Venol Atomówki Łódź." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/aktualnosci.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="aktualnosci" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Aktualności</p>
+        <h1 class="page-title">Portal Atomówek</h1>
+        <p class="page-lead">Klub, wyniki, turnieje, akademia, sukcesy.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="newsFilters" role="group" aria-label="Filtry kategorii">
+          <button class="filter active" data-cat="all">Wszystkie</button>
+          <button class="filter" data-cat="klubowe">Klubowe</button>
+          <button class="filter" data-cat="wyniki">Wyniki</button>
+          <button class="filter" data-cat="turnieje">Turnieje</button>
+          <button class="filter" data-cat="akademia">Akademia</button>
+          <button class="filter" data-cat="sukcesy">Sukcesy</button>
+        </div>
+        <div id="newsGrid" class="news-grid"></div>
+      </div>
+    </section>
+
+    <div class="modal" id="newsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Zamknij">×</button>
+        <div class="modal-body" id="newsModalBody"></div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
