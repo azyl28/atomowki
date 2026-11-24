@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria – Venol Atomówki Łódź</title>
+  <meta name="description" content="Galeria zdjęć Venol Atomówki Łódź: mecze, treningi, turnieje, drużyna, akademia, życie klubowe." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/galeria.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="galeria" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Galeria</p>
+        <h1 class="page-title">Zdjęcia Atomówek</h1>
+        <p class="page-lead">Mecze, treningi, turnieje, drużyna, akademia, życie klubowe.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="galleryFilters" role="group" aria-label="Kategorie galerii">
+          <button class="filter active" data-cat="all">Wszystkie</button>
+          <button class="filter" data-cat="mecze">Mecze</button>
+          <button class="filter" data-cat="treningi">Treningi</button>
+          <button class="filter" data-cat="turnieje">Turnieje</button>
+          <button class="filter" data-cat="druzyna">Drużyna</button>
+          <button class="filter" data-cat="akademia">Akademia</button>
+          <button class="filter" data-cat="zycie">Życie klubowe</button>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <p class="hint">Zdjęcia dodajesz w <code>ATOMOWKI_DATA.gallery</code>. Miejsca bez zdjęć są oznaczone.</p>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="lightbox-close" data-close-lightbox aria-label="Zamknij">×</button>
+      <button class="lightbox-prev" data-lightbox-prev aria-label="Poprzednie">‹</button>
+      <figure class="lightbox-figure">
+        <div id="lightboxImage" class="lightbox-image"></div>
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-next" data-lightbox-next aria-label="Następne">›</button>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/gallery.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
