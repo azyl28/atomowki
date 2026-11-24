@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rozgrywki i wyniki – Venol Atomówki Łódź</title>
+  <meta name="description" content="Najbliższe mecze, ostatnie wyniki i tabele rozgrywek Venol Atomówki Łódź. Dane edytowalne w pliku js/data.js." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/rozgrywki.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="rozgrywki" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Rozgrywki</p>
+        <h1 class="page-title">Mecze, wyniki, tabele</h1>
+        <p class="page-lead">Aktualne informacje sportowe. Dane edytowalne w <code>js/data.js</code>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Najbliższe mecze i turnieje</h2>
+        <div id="upcomingMatches" class="match-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Ostatnie wyniki</h2>
+        <div id="recentResults" class="match-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Tabela rozgrywek</h2>
+        <div class="table-wrap">
+          <table class="league-table" id="leagueTable">
+            <thead><tr><th>#</th><th>Drużyna</th><th>M</th><th>W</th><th>P</th><th>Pkt</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="hint">Dane tabeli edytowalne w <code>ATOMOWKI_DATA.league</code>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
