@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Venol Atomówki Łódź</title>
+  <meta name="description" content="Kontakt z Venol Atomówki Łódź. Formularz, dane klubu, mapa, linki do mediów społecznościowych. Informacje o naborze do Akademii." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/kontakt.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="kontakt" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Kontakt</p>
+        <h1 class="page-title">Napisz do nas</h1>
+        <p class="page-lead">Dane kontaktowe wymagają potwierdzenia przed publikacją.</p>
+      </div>
+    </section>
+
+    <section class="section" id="dolacz">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h2 class="section-title">Dane klubu</h2>
+          <ul class="contact-list">
+            <li><strong>Adres:</strong> <span>do potwierdzenia (Łódź)</span></li>
+            <li><strong>Telefon:</strong> <span>do potwierdzenia</span></li>
+            <li><strong>E-mail:</strong> <a href="mailto:kontakt@atomowki-lodz.pl">kontakt@atomowki-lodz.pl</a> <small>(placeholder)</small></li>
+            <li><strong>Facebook:</strong> <a href="#" rel="noopener">profil do uzupełnienia</a></li>
+            <li><strong>Strona klubu:</strong> <a href="#" rel="noopener">link do uzupełnienia</a></li>
+          </ul>
+          <div class="map-placeholder" aria-label="Miejsce na mapę">MIEJSCE NA MAPĘ<br /><small>np. osadzenie Google Maps / OpenStreetMap</small></div>
+        </div>
+        <div class="reveal delay-1">
+          <h2 class="section-title">Formularz kontaktowy</h2>
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>Imię i nazwisko<input type="text" name="name" required autocomplete="name" /></label>
+            <label>Adres e-mail<input type="email" name="email" required autocomplete="email" /></label>
+            <label>Temat<select name="topic" required><option value="">— wybierz —</option><option>Nabór do Akademii</option><option>Współpraca / sponsoring</option><option>Media</option><option>Inne</option></select></label>
+            <label>Treść wiadomości<textarea name="message" rows="5" required></textarea></label>
+            <label class="checkbox"><input type="checkbox" name="rodo" required /> Wyrażam zgodę na przetwarzanie danych w celu odpowiedzi na wiadomość.</label>
+            <button type="submit" class="btn btn-primary">WYŚLIJ</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            <p class="hint">Formularz nie wysyła wiadomości bez backendu. Połączenie z usługą (np. Formspree) wymaga konfiguracji.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="polityka">
+      <div class="container">
+        <h2 class="section-title">Polityka prywatności (skrót)</h2>
+        <p>Miejsce na pełną politykę prywatności klubu. Formularz kontaktowy wymaga zgody na przetwarzanie danych. Treść polityki do uzupełnienia przez klub.</p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
