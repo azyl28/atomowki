@@ -55,12 +55,16 @@ window.ATOMOWKI_DATA = {
     event:"Zgrupowanie reprezentacji mlodziezowych (grudzien 2022)",
     summary:"W grudniu 2022 roku szesc zawodniczek Venol Atomowek Lodz otrzymalo powolania na zgrupowanie reprezentacji mlodziezowych. Wedlug wypowiedzi trenera byl to wowczas najwiekszy udzial zawodniczek z jednego klubu wsrod powolanych.",
     players: [
-      { name:"Weronika Rozniatowska", category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
-      { name:"Zuzanna Orlik",         category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
-      { name:"Klaudia Witonska",      category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
-      { name:"Emilia Gurzawska",      category:"U18", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U18.", image:"" },
-      { name:"Nina Klamka",           category:"U16", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U16.", image:"" },
-      { name:"Nikola Talkowska",      category:"U16", year:"2022", note:"Powolanie na zgrupowanie reprezentacji Polski U16 (wypozyczona z Arki Gdynia).", image:"" }
+    { team:"senior", name:"Anna Nowak", number:"7", position:"Skrzydlowa", bio:"Kapitan druzyny, w rugby od 5 lat. Nieustępliwa w walce o każdą piłkę.", photo:"assets/images/players/zawodniczka-1.jpg", achievements: ["MVP Sezonu 2025"], stats: {} },
+    { team:"senior", name:"Katarzyna Wisniewska", number:"10", position:"Lacznik", bio:"Mozg druzyny, swietne podania i kopniecia. Reprezentantka Polski U18.", photo:"assets/images/players/zawodniczka-2.jpg", achievements: ["Powołanie do kadry U18"], stats: {} },
+    { team:"senior", name:"Magdalena Wojcik", number:"12", position:"Mlynarz", bio:"Sila napedowa formacji, wygrywa wiekszosc autow.", photo:"assets/images/players/zawodniczka-3.jpg", achievements: [], stats: {} },
+    { team:"senior", name:"Julia Kowalska", number:"15", position:"Obrończyni", bio:"Ostatnia linia obrony, swietna w szarzach. Nie boi sie twardej gry.", photo:"assets/images/players/zawodniczka-4.jpg", achievements: [], stats: {} },
+    { team:"u16", name:"Zofia Lewandowska", number:"4", position:"Skrzydlowa", bio:"Najmlodsza w druzynie, ogromny potencjal.", photo:"", achievements: [], stats: {} },
+    { team:"u16", name:"Maja Zielinska", number:"9", position:"Lacznik", bio:"Szybka i zwinna, swietnie czyta gre.", photo:"", achievements: [], stats: {} },
+    { team:"u16", name:"Oliwia Szymanska", number:"11", position:"Mlynarz", bio:"Waleczna i silna, nie boi sie kontaktu.", photo:"", achievements: [], stats: {} },
+    { team:"u13", name:"Lena Dabrowska", number:"1", position:"Atakujaca", bio:"Rozwija sie z kazdym treningiem, uwielbia rugby.", photo:"", achievements: [], stats: {} },
+    { team:"u13", name:"Hanna Wozniak", number:"6", position:"Wsparcie", bio:"Bardzo dobry refleks, swietna w obronie.", photo:"", achievements: [], stats: {} },
+    { team:"u13", name:"Amelia Kozlowska", number:"14", position:"Skrzydlowa", bio:"Najszybsza w druzynie, uwielbia zdobywac przyLOzenia.", photo:"", achievements: [], stats: {} }
     ]
   },
 
