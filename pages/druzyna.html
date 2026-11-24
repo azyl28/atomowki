@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drużyna – Venol Atomówki Łódź</title>
+  <meta name="description" content="Zawodniczki Venol Atomówki Łódź: seniorska drużyna, U16, U13. Karty zawodniczek z numerami i pozycjami." />
+  <link rel="canonical" href="https://atomowki-lodz.pl/pages/druzyna.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="druzyna" data-base="../">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div id="header-mount"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-kicker">Drużyna</p>
+        <h1 class="page-title">Zawodniczki Atomówek</h1>
+        <p class="page-lead">Poznaj skład seniorski oraz drużyny młodzieżowe U16 i U13.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Kategorie drużyn">
+          <button class="tab active" role="tab" aria-selected="true" data-team="senior">Seniorska</button>
+          <button class="tab" role="tab" aria-selected="false" data-team="u16">U16</button>
+          <button class="tab" role="tab" aria-selected="false" data-team="u13">U13</button>
+        </div>
+        <div id="playersGrid" class="players-grid" aria-live="polite"></div>
+        <p class="hint">Dane edytujesz w pliku <code>js/data.js</code> (tablica <code>ATOMOWKI_DATA.players</code>).</p>
+      </div>
+    </section>
+
+    <div class="modal" id="playerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="playerModalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Zamknij">×</button>
+        <div class="modal-body" id="playerModalBody"></div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
+  <script src="../js/data.js"></script>
+  <script src="../js/players.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
