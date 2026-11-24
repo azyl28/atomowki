@@ -1,0 +1,1400 @@
+﻿/* ============ RESET & TOKENS ============ */
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --black:#0b0b0d;
+  --graphite:#15161a;
+  --graphite-2:#1d1f24;
+  --red:#e10600;
+  --red-dark:#b00400;
+  --white:#ffffff;
+  --gray-1:#c9ccd3;
+  --gray-2:#8b8f99;
+  --gray-3:#4a4d55;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --font-display:'Barlow Condensed',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --container:1200px;
+  --header-h:76px;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font-body);background:var(--black);color:var(--white);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.05;letter-spacing:.02em;margin:0 0 .6em;text-transform:uppercase}
+p{margin:0 0 1em;color:var(--gray-1)}
+code{background:var(--graphite-2);padding:.15em .4em;border-radius:5px;font-size:.9em;color:#ffd7d5}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.container{width:min(100% - 2.5rem,var(--container));margin-inline:auto}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--red);color:#fff;padding:.7rem 1rem;z-index:200}
+.skip-link:focus{left:1rem;top:1rem}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.85rem 1.5rem;border-radius:var(--radius-sm);border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;font-size:.95rem}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 25px rgba(225,6,0,.35)}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-outline:hover{background:#fff;color:var(--black);border-color:#fff}
+.btn-ghost{color:var(--white);padding-left:0}
+.btn-ghost:hover{color:var(--red)}
+.btn-lg{padding:1.1rem 2rem;font-size:1.05rem}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:calc(100vh - var(--header-h));display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-placeholder{position:absolute;inset:0;display:grid;place-items:center;gap:.3rem;text-align:center;background:
+  radial-gradient(circle at 30% 30%,rgba(225,6,0,.25),transparent 55%),
+  repeating-linear-gradient(45deg,#111 0 22px,#0d0d0f 22px 44px);
+}
+.hero-placeholder span{font-family:var(--font-display);font-size:clamp(1.1rem,3vw,1.8rem);letter-spacing:.2em;color:rgba(255,255,255,.35)}
+.hero-placeholder small{color:rgba(255,255,255,.25);letter-spacing:.1em}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,13,.95) 0%,rgba(11,11,13,.78) 45%,rgba(11,11,13,.45) 100%)}
+.hero-content{position:relative;z-index:2;padding-block:4rem}
+.hero-kicker{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+.hero-title{font-size:clamp(2.8rem,8vw,6.5rem);letter-spacing:.01em;margin:.3em 0}
+.hero-title .accent{color:var(--red)}
+.hero-motto{font-family:var(--font-display);font-size:clamp(1.1rem,2.4vw,1.7rem);letter-spacing:.35em;color:var(--white);margin-bottom:1rem}
+.hero-desc{max-width:620px;font-size:1.02rem}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.8rem 0}
+.hero-stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.12)}
+.hero-stats li{display:flex;flex-direction:column}
+.hero-stats strong{font-family:var(--font-display);font-size:1.5rem;color:var(--white)}
+.hero-stats span{font-size:.78rem;color:var(--gray-2);letter-spacing:.08em;text-transform:uppercase}
+.scroll-hint{position:absolute;left:50%;bottom:1.4rem;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.35);border-radius:16px;z-index:2}
+.scroll-hint span{position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:var(--red);border-radius:2px;animation:scrollDot 1.6s infinite}
+
+/* ============ SECTIONS ============ */
+.section{padding:clamp(3.5rem,7vw,6rem) 0;position:relative}
+.section-alt{background:var(--graphite)}
+.section-kicker{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:.4rem}
+.section-title{font-size:clamp(1.8rem,4vw,3rem)}
+.section-lead{max-width:720px;color:var(--gray-1)}
+.text-center{text-align:center}
+.hint{font-size:.8rem;color:var(--gray-2);margin-top:1rem}
+.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:start}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+
+/* mini timeline */
+.mini-timeline li{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mini-timeline span{font-family:var(--font-display);font-size:1.3rem;color:var(--red);min-width:70px}
+.mini-timeline p{margin:0;font-size:.92rem}
+.timeline{position:relative;padding-left:1rem}
+.timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--red),transparent)}
+.timeline li{position:relative;display:grid;grid-template-columns:100px 1fr;gap:1.4rem;padding:1.4rem 0 1.4rem 1.5rem}
+.timeline .year{font-family:var(--font-display);font-size:1.5rem;color:var(--red);position:relative}
+.timeline .year::before{content:"";position:absolute;left:-1.98rem;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(225,6,0,.2)}
+.timeline h3{margin-bottom:.2em}
+.timeline p{margin:0;font-size:.95rem}
+
+/* info cards */
+.info-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.8rem}
+.info-card h2,.info-card h3{margin-top:0}
+.stats-list{display:grid;gap:1rem}
+.stats-list li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px dashed rgba(255,255,255,.12);padding-bottom:.7rem}
+.stats-list strong{font-family:var(--font-display);font-size:1.25rem;color:var(--white)}
+.stats-list span{color:var(--gray-2);font-size:.85rem}
+.check-list{margin-top:.6rem;display:grid;gap:.45rem}
+.check-list li{padding-left:1.4rem;position:relative;font-size:.92rem;color:var(--gray-1)}
+.check-list li::before{content:"\2714";position:absolute;left:0;color:var(--red)}
+
+/* CTA */
+.section-cta{padding-block:3rem}
+.cta-box{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:linear-gradient(120deg,var(--red-dark),var(--red));border-radius:var(--radius);padding:2.4rem;box-shadow:var(--shadow)}
+.cta-box .section-title{color:#fff;margin-bottom:.3em}
+.cta-box p{color:rgba(255,255,255,.85)}
+.cta-box .btn-primary{background:var(--black)}
+.cta-box .btn-primary:hover{background:#000}
+
+/* values */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.value-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.6rem;transition:transform .25s,border-color .25s}
+.value-card:hover{transform:translateY(-4px);border-color:var(--red)}
+.value-card h3{color:var(--white);font-size:1.25rem}
+.value-card p{font-size:.9rem;margin:0}
+
+/* news */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.news-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.news-card:hover{transform:translateY(-4px);border-color:rgba(225,6,0,.6)}
+.news-thumb{aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.news-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.news-meta{display:flex;gap:.7rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-2)}
+.news-cat{color:var(--red);font-weight:700}
+.news-body h3{font-size:1.15rem;margin:0}
+.news-body p{font-size:.9rem;margin:0}
+.news-body .btn{margin-top:auto;align-self:flex-start}
+
+/* sponsors */
+.sponsor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.sponsor-slot{border:1px dashed rgba(255,255,255,.2);border-radius:var(--radius);min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;color:var(--gray-1);font-family:var(--font-display);font-size:1.2rem;letter-spacing:.1em;background:rgba(255,255,255,.02)}
+.sponsor-slot small{font-family:var(--font-body);font-size:.7rem;color:var(--gray-2);letter-spacing:.05em}
+
+/* page hero */
+.page-hero{padding:4.5rem 0 2.5rem;background:
+  radial-gradient(900px 300px at 15% 0%,rgba(225,6,0,.22),transparent 60%),
+  linear-gradient(180deg,var(--graphite) 0%,var(--black) 100%);
+  border-bottom:1px solid rgba(255,255,255,.06)}
+.page-title{font-size:clamp(2.2rem,6vw,4rem)}
+.page-lead{max-width:680px}
+
+/* tabs & filters */
+.tabs,.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.tab,.filter{background:var(--graphite-2);border:1px solid rgba(255,255,255,.1);color:var(--gray-1);padding:.6rem 1.1rem;border-radius:999px;cursor:pointer;font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;transition:all .2s}
+.tab:hover,.filter:hover{border-color:var(--red);color:#fff}
+.tab.active,.filter.active{background:var(--red);border-color:var(--red);color:#fff}
+
+/* players */
+.players-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.player-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit;transition:transform .25s,border-color .25s}
+.player-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.player-photo{aspect-ratio:3/4;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;position:relative;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:.5rem}
+.player-number{position:absolute;top:.6rem;right:.6rem;background:var(--red);font-family:var(--font-display);font-weight:800;font-size:1.2rem;width:44px;height:44px;display:grid;place-items:center;border-radius:50%}
+.player-info{padding:1rem 1.1rem 1.2rem}
+.player-info h3{font-size:1.1rem;margin:0 0 .2em}
+.player-pos{font-size:.75rem;color:var(--red);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+
+/* training */
+.training-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.training-card{background:var(--graphite-2);border-left:4px solid var(--red);border-radius:var(--radius-sm);padding:1.2rem 1.4rem}
+.training-card h3{margin:0 0 .3em;font-size:1.15rem}
+.training-card p{margin:0;font-size:.9rem}
+
+/* FAQ */
+.faq{display:grid;gap:.7rem;max-width:860px}
+.faq-item{border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-sm);background:var(--graphite-2);overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:0;color:#fff;padding:1rem 1.2rem;cursor:pointer;font-family:var(--font-body);font-size:1rem;font-weight:600;text-align:left}
+.faq-q::after{content:"+";font-family:var(--font-display);font-size:1.4rem;color:var(--red);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.2rem}
+.faq-a p{padding-bottom:1rem;margin:0;font-size:.92rem}
+
+/* matches */
+.match-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.match-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem}
+.match-teams{display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.2rem;letter-spacing:.03em;margin-bottom:.8rem}
+.match-vs{color:var(--red);font-size:.85rem}
+.match-score{font-family:var(--font-display);font-size:1.7rem;color:#fff;text-align:center;margin-bottom:.6rem}
+.match-info{display:grid;gap:.25rem;font-size:.82rem;color:var(--gray-2);border-top:1px solid rgba(255,255,255,.08);padding-top:.8rem}
+.match-info strong{color:var(--gray-1);font-weight:600}
+.empty-note{border:1px dashed rgba(255,255,255,.2);padding:1.2rem;border-radius:var(--radius);color:var(--gray-2);font-size:.9rem}
+
+/* league table */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08)}
+.league-table{width:100%;border-collapse:collapse;min-width:520px}
+.league-table th,.league-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+.league-table th{background:var(--graphite-2);font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;color:var(--gray-1);font-size:.8rem}
+.league-table tr:hover td{background:rgba(225,6,0,.06)}
+
+/* successes */
+.success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.success-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden}
+.success-photo{aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.success-body{padding:1.2rem 1.3rem 1.4rem}
+.success-meta{display:flex;gap:.7rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-2);margin-bottom:.5rem}
+.success-meta .cat{color:var(--red);font-weight:700}
+.success-body h3{font-size:1.2rem;margin:0 0 .3em}
+.success-body p{font-size:.9rem;margin:0}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.gallery-item{position:relative;aspect-ratio:1;border-radius:var(--radius-sm);overflow:hidden;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);border:0;cursor:pointer;padding:0;display:grid;place-items:center;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;transition:transform .25s}
+.gallery-item:hover{transform:scale(1.03)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .gallery-cat{position:absolute;left:.4rem;bottom:.4rem;background:rgba(11,11,13,.8);color:var(--red);font-size:.62rem;padding:.2rem .45rem;border-radius:4px;letter-spacing:.08em}
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(5,5,7,.96);display:none;place-items:center;padding:2rem}
+.lightbox.open{display:grid}
+.lightbox-figure{max-width:min(1000px,92vw);text-align:center}
+.lightbox-image{min-height:320px;border-radius:var(--radius-sm);display:grid;place-items:center;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);color:rgba(255,255,255,.35);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:2rem}
+.lightbox-image img{max-height:70vh;width:auto;margin:auto}
+.lightbox figcaption{color:var(--gray-1);margin-top:.9rem;font-size:.9rem}
+.lightbox-close{position:absolute;top:1rem;right:1.2rem;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.06);border:0;color:#fff;font-size:2.4rem;width:56px;height:56px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lightbox-prev{left:1rem}.lightbox-next{right:1rem}
+.lightbox-prev:hover,.lightbox-next:hover{background:var(--red)}
+
+/* contact */
+.contact-list{display:grid;gap:.8rem;margin-bottom:1.6rem}
+.contact-list li{font-size:.95rem}
+.contact-list strong{color:var(--white)}
+.contact-list small{color:var(--gray-2)}
+.map-placeholder{aspect-ratio:16/9;border:1px dashed rgba(255,255,255,.25);border-radius:var(--radius);display:grid;place-items:center;text-align:center;color:var(--gray-2);font-family:var(--font-display);letter-spacing:.12em;font-size:.9rem}
+.contact-form{display:grid;gap:.9rem}
+.contact-form label{display:grid;gap:.35rem;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-1)}
+.contact-form input,.contact-form select,.contact-form textarea{background:var(--graphite-2);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);padding:.8rem .9rem;color:#fff;font:inherit;transition:border-color .2s}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--red);outline:none}
+.contact-form .checkbox{display:flex;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--gray-1)}
+.contact-form .checkbox input{width:auto}
+.form-note{font-size:.85rem;min-height:1.2em}
+.form-note.ok{color:#5dd17a}.form-note.err{color:#ff6b63}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:250;display:none}
+.modal.open{display:grid;place-items:center}
+.modal-backdrop{position:absolute;inset:0;background:rgba(5,5,7,.8);backdrop-filter:blur(4px)}
+.modal-content{position:relative;background:var(--graphite);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);width:min(640px,92vw);max-height:88vh;overflow:auto;padding:2rem;z-index:1}
+.modal-close{position:absolute;top:.6rem;right:.9rem;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+.modal-body h2{color:#fff;margin-bottom:.4em}
+.modal-photo{aspect-ratio:16/9;border-radius:var(--radius-sm);background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+
+/* back to top */
+.back-to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:150;width:46px;height:46px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.back-to-top.show{opacity:1;pointer-events:auto;transform:none}
+
+/* footer */
+.site-footer{background:#08080a;border-top:1px solid rgba(255,255,255,.07);padding-top:3rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.5rem}
+.footer-brand p{font-size:.9rem;margin-top:.8rem}
+.footer-grid h4{font-size:.95rem;letter-spacing:.12em;color:#fff;margin-bottom:1rem}
+.footer-links{display:grid;gap:.45rem}
+.footer-links a{color:var(--gray-2);font-size:.88rem;transition:color .2s}
+.footer-links a:hover{color:var(--red)}
+.footer-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:var(--gray-2)}
+
+/* hero photo */
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* ============================================================
+   MODUL B — ROZBUDOWA (historia, reprezentacja, sponsorzy, sezon)
+   ============================================================ */
+
+/* ---------- OŚ CZASU Z FOTOGRAFIAMI ---------- */
+.timeline-fancy{position:relative;padding-left:0;margin-top:2rem}
+.timeline-fancy::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--red),rgba(225,6,0,.1));transform:translateX(-50%)}
+.timeline-fancy-item{position:relative;display:grid;grid-template-columns:1fr 80px 1fr;gap:1rem;align-items:center;padding:1.5rem 0}
+.timeline-fancy-item .tf-content{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem;transition:border-color .3s,transform .3s}
+.timeline-fancy-item:hover .tf-content{border-color:var(--red);transform:translateY(-3px)}
+.timeline-fancy-item .tf-content h3{margin:0 0 .4em;font-size:1.15rem;color:#fff}
+.timeline-fancy-item .tf-content p{margin:0;font-size:.92rem;color:var(--gray-1)}
+.timeline-fancy-item .tf-photo{aspect-ratio:4/3;border-radius:var(--radius-sm);overflow:hidden;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:.5rem}
+.timeline-fancy-item .tf-photo img{width:100%;height:100%;object-fit:cover}
+.timeline-fancy-item .tf-dot{position:relative;display:grid;place-items:center}
+.timeline-fancy-item .tf-dot span{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--red);background:var(--black);padding:.35rem .8rem;border:2px solid var(--red);border-radius:999px;white-space:nowrap;z-index:1}
+.timeline-fancy-item:nth-child(odd) .tf-content{grid-column:1}
+.timeline-fancy-item:nth-child(odd) .tf-photo{grid-column:3}
+.timeline-fancy-item:nth-child(even) .tf-content{grid-column:3}
+.timeline-fancy-item:nth-child(even) .tf-photo{grid-column:1}
+.timeline-fancy-item:nth-child(even) .tf-dot{grid-column:2;grid-row:1}
+
+/* ---------- KARTY TRENERÓW / KAPITANÓW ---------- */
+.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2rem}
+.coach-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;transition:transform .3s,border-color .3s}
+.coach-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.coach-photo{aspect-ratio:1;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.coach-photo img{width:100%;height:100%;object-fit:cover}
+.coach-body{padding:1.2rem 1.3rem 1.4rem}
+.coach-body h3{margin:0 0 .2em;font-size:1.15rem;color:#fff}
+.coach-role{font-size:.75rem;color:var(--red);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.6rem;display:block}
+.coach-note{font-size:.85rem;color:var(--gray-2);margin:0}
+
+/* ---------- REPREZENTACJA POLSKI ---------- */
+.national-hero{background:linear-gradient(135deg,rgba(225,6,0,.15),transparent 60%);border:1px solid rgba(225,6,0,.35);border-radius:var(--radius);padding:2rem;margin-bottom:2rem}
+.national-hero h2{margin:0 0 .3em}
+.national-hero p{margin:0;color:var(--gray-1)}
+.national-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.national-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;position:relative;transition:transform .3s,border-color .3s}
+.national-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.national-card .nat-photo{aspect-ratio:3/4;background:repeating-linear-gradient(45deg,#1a1c21 0 14px,#141619 14px 28px);display:grid;place-items:center;color:var(--gray-2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:.5rem}
+.national-card .nat-photo img{width:100%;height:100%;object-fit:cover}
+.national-card .nat-badge{position:absolute;top:.7rem;left:.7rem;background:var(--red);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.72rem;letter-spacing:.1em;padding:.25rem .55rem;border-radius:4px}
+.national-card .nat-body{padding:1.1rem 1.2rem 1.3rem}
+.national-card .nat-body h3{margin:0 0 .2em;font-size:1.05rem;color:#fff}
+.national-card .nat-year{font-size:.72rem;color:var(--red);letter-spacing:.12em;font-weight:700;text-transform:uppercase}
+.national-card .nat-note{font-size:.83rem;color:var(--gray-2);margin:.5rem 0 0}
+
+/* ---------- SPONSORZY PRO ---------- */
+.sponsor-pro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.sponsor-pro{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.4rem 1rem;text-align:center;transition:transform .25s,border-color .25s;min-height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem}
+.sponsor-pro:hover{transform:translateY(-4px);border-color:var(--red)}
+.sponsor-pro .sp-name{font-family:var(--font-display);font-weight:800;font-size:1.05rem;letter-spacing:.06em;color:#fff;text-transform:uppercase}
+.sponsor-pro .sp-role{font-size:.72rem;color:var(--gray-2);letter-spacing:.08em;text-transform:uppercase}
+.sponsor-pro .sp-status{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-top:.4rem;font-weight:700}
+.sp-status.ok{background:rgba(93,209,122,.15);color:#5dd17a;border:1px solid rgba(93,209,122,.4)}
+.sp-status.pending{background:rgba(255,180,0,.12);color:#ffb400;border:1px solid rgba(255,180,0,.35)}
+
+/* ---------- SEZON 2026/2027 ---------- */
+.season-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2rem}
+.season-card{background:var(--graphite-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.6rem;border-top:4px solid var(--red)}
+.season-card h3{margin:0 0 .2em;font-size:1.2rem}
+.season-meta{display:flex;gap:1rem;flex-wrap:wrap;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-2);margin-bottom:1rem}
+.season-meta .place{color:var(--red);font-weight:700}
+.season-match{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+.season-match:last-child{border-bottom:0}
+.season-match .score{font-family:var(--font-display);font-weight:800;color:#fff;font-size:1rem}
+.season-match .win{color:#5dd17a}
+.season-match .loss{color:#ff6b63}
+.season-note{margin-top:1rem;font-size:.8rem;color:var(--gray-2);border-top:1px dashed rgba(255,255,255,.1);padding-top:.8rem}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:860px){
+  .timeline-fancy::before{left:20px}
+  .timeline-fancy-item{grid-template-columns:40px 1fr;gap:.8rem}
+  .timeline-fancy-item .tf-content,
+  .timeline-fancy-item:nth-child(odd) .tf-content,
+  .timeline-fancy-item:nth-child(even) .tf-content{grid-column:2}
+  .timeline-fancy-item .tf-photo,
+  .timeline-fancy-item:nth-child(odd) .tf-photo,
+  .timeline-fancy-item:nth-child(even) .tf-photo{display:none}
+  .timeline-fancy-item .tf-dot,
+  .timeline-fancy-item:nth-child(even) .tf-dot{grid-column:1;grid-row:1;justify-content:flex-start}
+  .timeline-fancy-item .tf-dot span{font-size:.85rem;padding:.2rem .5rem}
+  .coach-grid{grid-template-columns:1fr 1fr}
+  .national-grid{grid-template-columns:1fr 1fr}
+  .sponsor-pro-grid{grid-template-columns:1fr 1fr}
+  .season-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .coach-grid{grid-template-columns:1fr}
+  .national-grid{grid-template-columns:1fr}
+}
+/* ============================================================
+   MODERNIZACJA WIZUALNA (Dark Sport / Cinematic)
+   ============================================================ */
+
+/* --- NOWY HERO --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--black);
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 20%; opacity: 0.6;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(11,11,13,1) 0%, rgba(11,11,13,0.8) 45%, rgba(11,11,13,0.2) 100%);
+}
+.hero-content-wrapper { position: relative; z-index: 2; width: 100%; }
+.hero-text-box { max-width: 650px; padding-block: 4rem; }
+.hero-kicker {
+  font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gray-1); margin-bottom: 1rem; font-weight: 600;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95; letter-spacing: 0.02em;
+  margin: 0 0 0.5rem; color: var(--white); text-transform: uppercase;
+}
+.hero-title .accent { color: var(--red); }
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.15em; color: var(--white);
+  margin-bottom: 1.5rem; border-bottom: 2px solid var(--red);
+  display: inline-block; padding-bottom: 0.5rem;
+}
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.95rem; letter-spacing: 0.2em;
+  color: var(--gray-2); margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* --- PRZYCISKI --- */
+.btn {
+  border-radius: 4px !important;
+  transition: all 0.3s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { box-shadow: 0 0 20px rgba(225, 6, 0, 0.4); }
+.btn-primary:hover { box-shadow: 0 0 30px rgba(225, 6, 0, 0.6); }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white); background: transparent;
+}
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* --- PRZYCISK CTA W HEADERZE --- */
+.btn-nav-cta {
+  padding: 0.6rem 1.2rem !important;
+  font-size: 0.8rem !important;
+  margin-left: 1rem;
+  box-shadow: none !important;
+  white-space: nowrap;
+}
+@media (max-width: 860px) { .btn-nav-cta { display: none !important; } }
+
+/* --- SEKCJA Z TŁEM SMOKE --- */
+.section-about-dark {
+  position: relative;
+  background-color: var(--black);
+  background-image: url('../assets/images/bg-smoke.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 1px solid rgba(225, 6, 0, 0.2);
+  border-bottom: 1px solid rgba(225, 6, 0, 0.2);
+}
+.section-about-dark::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(11, 11, 13, 0.85); z-index: 1;
+}
+.section-about-dark .container { position: relative; z-index: 2; }
+
+/* ============================================================
+   SLIDER CSS (animacja automatyczna)
+   ============================================================ */
+
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0;
+  animation: fadeSlider 10s infinite;
+}
+
+.slide-1 {
+  animation-delay: 0s;
+}
+
+.slide-2 {
+  animation-delay: 5s;
+}
+
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  5% { opacity: 0.6; }  /* Plynne pojawienie */
+  45% { opacity: 0.6; } /* Trzymanie zdjecia */
+  55% { opacity: 0; }   /* Zanikanie */
+  100% { opacity: 0; }
+}
+
+
+
+
+
+/* ==========================================================
+   PRZESUNIĘCIE NAPISU W HERO (WIĘCEJ MIEJSCA Z LEWEJ)
+   ========================================================== */
+
+/* Przesuwamy kontener z tekstem w prawo, używając padding-left */
+.hero-content-wrapper {
+  /* clamp(min, preferred, max) - dynamicznie dopasowuje margines */
+  padding-left: clamp(2rem, 8vw, 8rem) !important; 
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Upewniamy się, że sam blok z tekstem nie ma ograniczeń */
+.hero-text-box {
+  margin-left: 0 !important;
+  max-width: 800px; /* Zwiększamy maksymalną szerokość, by tekst się nie łamał */
+}
+
+/* Na mniejszych ekranach (mobile) zmniejszamy margines, by tekst był widoczny */
+@media (max-width: 768px) {
+  .hero-content-wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* ============================================================
+   PROFESJONALNY HERO (ZGODNY Z GRAFIKĄ)
+   ============================================================ */
+
+/* 1. Główne tło i kontener */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #050506;
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%; /* Dopasowanie zdjęcia */
+  opacity: 1; /* Zdjęcie ma być wyraźne, gradient je przyciemni */
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  /* Gradient: bardzo ciemny z lewej, przezroczysty z prawej */
+  background: linear-gradient(90deg, rgba(5,5,6,1) 0%, rgba(5,5,6,0.95) 35%, rgba(5,5,6,0.3) 70%, transparent 100%);
+}
+
+/* 2. Tekst po lewej stronie */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(2rem, 8vw, 10rem) !important; /* Przesunięcie w prawo */
+  padding-top: 5vh;
+}
+.hero-text-box { max-width: 650px; }
+
+.hero-kicker {
+  font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #fff; margin-bottom: 1rem; font-weight: 600;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.hero-kicker::after {
+  content: ""; height: 1px; width: 40px; background: var(--red); display: inline-block;
+}
+
+/* 3. Główny napis ATOMÓWKI 2 RUGBY */
+.hero-title {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* Lekki efekt grunge/zużycia na tekście */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.hero-title .accent {
+  color: var(--red);
+}
+
+/* 4. Podtytuł (kursywa, czerwony) */
+.hero-subtitle {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--red);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(225,6,0,0.4);
+}
+
+/* 5. Motto */
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.9rem; letter-spacing: 0.4em;
+  color: #d1d5db; margin-bottom: 3rem;
+  font-weight: 600; text-transform: uppercase;
+}
+
+/* 6. NOWE PRZYCISKI (Ukośne, z poświatą) */
+.hero-actions {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body); font-size: 0.8rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transform: skewX(-15deg); /* Efekt ukośnych krawędzi */
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-hero > * { transform: skewX(15deg); } /* Prostowanie tekstu w środku */
+
+.btn-hero-primary {
+  background: var(--red); color: #fff;
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+}
+.btn-hero-primary:hover {
+  background: #b00400;
+  transform: skewX(-15deg) translateY(-3px);
+  box-shadow: 0 0 30px rgba(225, 6, 0, 0.7);
+}
+
+.btn-hero-outline {
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: skewX(-15deg) translateY(-3px);
+}
+
+/* 7. Nawigacja slidera (Strzałki i kropki) */
+.hero-slider-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 3;
+}
+.slider-arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slider-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+.slider-dots {
+  display: flex; gap: 0.5rem;
+}
+.dot {
+  width: 30px; height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.dot.active {
+  background: var(--red);
+  width: 50px;
+}
+
+/* 8. Responsywność (Mobile) */
+@media (max-width: 900px) {
+  .hero-content-wrapper { padding-left: 1.5rem !important; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .hero-slider-nav { bottom: 1rem; }
+}
+
+/* ============================================================
+   PROFESJONALNY HERO (ZGODNY Z GRAFIKĄ)
+   ============================================================ */
+
+/* 1. Główne tło i kontener */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #050506;
+}
+.hero-media { position: absolute; inset: 0; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%; /* Dopasowanie zdjęcia */
+  opacity: 1; /* Zdjęcie ma być wyraźne, gradient je przyciemni */
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  /* Gradient: bardzo ciemny z lewej, przezroczysty z prawej */
+  background: linear-gradient(90deg, rgba(5,5,6,1) 0%, rgba(5,5,6,0.95) 35%, rgba(5,5,6,0.3) 70%, transparent 100%);
+}
+
+/* 2. Tekst po lewej stronie */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(2rem, 8vw, 10rem) !important; /* Przesunięcie w prawo */
+  padding-top: 5vh;
+}
+.hero-text-box { max-width: 650px; }
+
+.hero-kicker {
+  font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #fff; margin-bottom: 1rem; font-weight: 600;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.hero-kicker::after {
+  content: ""; height: 1px; width: 40px; background: var(--red); display: inline-block;
+}
+
+/* 3. Główny napis ATOMÓWKI 2 RUGBY */
+.hero-title {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* Lekki efekt grunge/zużycia na tekście */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.hero-title .accent {
+  color: var(--red);
+}
+
+/* 4. Podtytuł (kursywa, czerwony) */
+.hero-subtitle {
+  font-family: 'Bebas Neue', var(--font-display), sans-serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--red);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(225,6,0,0.4);
+}
+
+/* 5. Motto */
+.hero-motto {
+  font-family: var(--font-body);
+  font-size: 0.9rem; letter-spacing: 0.4em;
+  color: #d1d5db; margin-bottom: 3rem;
+  font-weight: 600; text-transform: uppercase;
+}
+
+/* 6. NOWE PRZYCISKI (Ukośne, z poświatą) */
+.hero-actions {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body); font-size: 0.8rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transform: skewX(-15deg); /* Efekt ukośnych krawędzi */
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-hero > * { transform: skewX(15deg); } /* Prostowanie tekstu w środku */
+
+.btn-hero-primary {
+  background: var(--red); color: #fff;
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+}
+.btn-hero-primary:hover {
+  background: #b00400;
+  transform: skewX(-15deg) translateY(-3px);
+  box-shadow: 0 0 30px rgba(225, 6, 0, 0.7);
+}
+
+.btn-hero-outline {
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  transform: skewX(-15deg) translateY(-3px);
+}
+
+/* 7. Nawigacja slidera (Strzałki i kropki) */
+.hero-slider-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 3;
+}
+.slider-arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slider-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+.slider-dots {
+  display: flex; gap: 0.5rem;
+}
+.dot {
+  width: 30px; height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.dot.active {
+  background: var(--red);
+  width: 50px;
+}
+
+/* 8. Responsywność (Mobile) */
+@media (max-width: 900px) {
+  .hero-content-wrapper { padding-left: 1.5rem !important; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .hero-slider-nav { bottom: 1rem; }
+}
+
+/* ============================================================
+   NOWE TŁA I BANERY (Z INTEGRACJI ZDJĘĆ)
+   ============================================================ */
+
+/* 1. Tło dla sekcji "O klubie" (Czerwony dym) */
+.section-about-dark {
+  background-image: url('../assets/images/new-5.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 2. Tło dla sekcji Sponsorzy (Zdjęcie sponsorów) */
+.section-sponsors {
+  background-image: 
+    linear-gradient(rgba(11, 11, 13, 0.9), rgba(11, 11, 13, 0.95)), 
+    url('../assets/images/new-2.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 3. Tło dla pustych kart zawodniczek (Czerwone smugi zamiast pasków) */
+.player-photo, .nat-photo, .news-thumb {
+  background: url('../assets/images/new-1.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 4. Tło dla sekcji "Reprezentacja" na stronie głównej */
+.section-alt {
+  background: transparent !important;
+  /* Jeśli chcesz tło z drużyną, odkomentuj poniższą linię */
+  /* background-image: linear-gradient(rgba(11,11,13,0.9), rgba(11,11,13,0.9)), url('../assets/images/new-6.jpg') !important; */
+}
+
+/* 5. Poprawka dla slidera, aby nowe zdjęcia ładnie się wyświetlały */
+.hero-photo {
+  object-position: center 30% !important;
+}
+
+/* ============================================================
+   WYMUSZENIE NOWYCH TŁ (TWARDA INIEKCJA)
+   ============================================================ */
+
+/* 1. Slider - tło ze stadionu (jeśli HTML nie zadziałał) */
+.hero {
+  background-image: url('../assets/images/new-4.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 2. Sekcja "O klubie" - Czerwony dym */
+.section-about-dark {
+  background-image: linear-gradient(rgba(11,11,13,0.8), rgba(11,11,13,0.8)), url('../assets/images/new-5.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+.section-about-dark::before {
+  display: none !important; /* Usuwamy starą czarną nakładkę, by dym był widoczny */
+}
+
+/* 3. Sekcja "Sponsorzy" - Tło z logotypami */
+.section-sponsors {
+  background-image: linear-gradient(rgba(11,11,13,0.9), rgba(11,11,13,0.95)), url('../assets/images/new-2.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 4. Puste karty zawodniczek - Tło z czerwonymi smugami */
+.player-photo, .nat-photo, .news-thumb {
+  background-image: url('../assets/images/new-1.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Upewniamy się, że tekst na tych tłach jest czytelny */
+.player-card { background: rgba(21, 22, 26, 0.8) !important; }
+.news-card { background: rgba(21, 22, 26, 0.8) !important; }
+.national-card { background: rgba(21, 22, 26, 0.8) !important; }
+
+
+/* ============================================================
+   FINALNE MENU - LITA CZERŃ I CZYSTE STYLE (BEZ BŁĘDÓW)
+   ============================================================ */
+
+/* 1. Nagłówek - Wymuszamy 100% litej czerni i usuwamy efekt szkła */
+.site-header {
+  background: #050506 !important; /* Czysta czerń */
+  backdrop-filter: none !important; /* Usuwamy rozmycie */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: none !important;
+}
+
+/* 2. Ukośne, czerwone cięcia w tle (ostre, bez mgły) */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(105deg, transparent 8%, rgba(225, 6, 0, 0.4) 10%, transparent 13%),
+    linear-gradient(105deg, transparent 87%, rgba(225, 6, 0, 0.3) 90%, transparent 93%) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3. Dolna linia (Tunel) - Jasna, świecąca */
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 15%, #fff 50%, rgba(255,255,255,0.6) 85%, transparent 100%) !important;
+  box-shadow: 
+    0 0 10px 2px rgba(225, 6, 0, 0.8),
+    0 0 20px 6px rgba(225, 6, 0, 0.5) !important;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* 4. Układ wewnątrz nagłówka */
+.header-inner {
+  position: relative;
+  z-index: 2;
+  padding-inline: 2rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px; /* Zapobiega zapadaniu się paska */
+}
+
+/* 5. Logo i teksty */
+.brand { display: flex; align-items: center; gap: 1rem !important; }
+.brand-mark svg { width: 46px !important; height: 46px !important; }
+.brand-text {
+  display: flex; flex-direction: column; line-height: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+}
+.brand-text .venol { font-family: var(--font-display); font-size: 0.8rem; color: #fff; letter-spacing: 0.1em; }
+.brand-text strong { font-family: 'Bebas Neue', var(--font-display); font-size: 1.6rem !important; color: #fff; letter-spacing: 0.05em; margin: 2px 0; }
+.brand-text .lodz { font-family: var(--font-display); font-size: 0.85rem; color: #fff; letter-spacing: 0.2em; }
+
+/* 6. Nawigacja i separatory */
+.primary-nav { display: flex; align-items: center; flex: 1; margin-left: 2rem; justify-content: space-between; }
+.primary-nav ul { display: flex; gap: 0 !important; margin: 0 !important; }
+.primary-nav ul li { position: relative; display: flex; align-items: center; }
+
+/* Pionowe kreski między linkami */
+.primary-nav ul li:not(:last-child)::after {
+  content: "|"; position: absolute; right: -2px; top: 50%;
+  transform: translateY(-60%); color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem; pointer-events: none;
+}
+
+.primary-nav a {
+  color: #e5e7eb !important; font-family: var(--font-body);
+  font-size: 0.7rem !important; font-weight: 600 !important;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 1.5rem 1rem !important; position: relative;
+  transition: color 0.3s; white-space: nowrap; display: flex; align-items: center;
+}
+.primary-nav a:hover { color: #fff !important; }
+
+/* 7. Aktywna zakładka - idealnie wyrównana z dolną linią */
+.primary-nav a.active { color: #fff !important; text-shadow: 0 0 8px rgba(225, 6, 0, 0.8); }
+.primary-nav a.active::after {
+  content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px;
+  background: var(--red);
+  box-shadow: 0 0 10px 2px rgba(225, 6, 0, 1), 0 0 20px 5px rgba(225, 6, 0, 0.6);
+  z-index: 10;
+}
+
+/* 8. Przycisk DOŁĄCZ */
+.nav-actions { display: flex; align-items: center; }
+.btn-nav-cta {
+  background: var(--red) !important; color: #fff !important;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.8rem 2.5rem !important;
+  font-family: var(--font-display); font-size: 0.9rem !important;
+  font-weight: 800 !important; text-transform: uppercase;
+  transform: skewX(-15deg); transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5); border: none;
+}
+.btn-nav-cta span { transform: skewX(15deg); display: inline-block; }
+.btn-nav-cta .arrow { margin-left: 0.5rem; font-size: 1.2rem; }
+.btn-nav-cta:hover { background: #b00400 !important; box-shadow: 0 0 25px rgba(225, 6, 0, 0.8); }
+
+/* 9. Poprawka Responsywności (naprawa błędnych klamer) */
+@media (max-width: 1400px) {
+  .primary-nav a { font-size: 0.65rem !important; padding: 1.5rem 0.7rem !important; }
+  .btn-nav-cta { padding: 0.7rem 1.5rem !important; font-size: 0.8rem !important; }
+}
+@media (max-width: 1200px) {
+  .primary-nav a { font-size: 0.6rem !important; padding: 1.5rem 0.5rem !important; }
+}
+@media (max-width: 900px) {
+  .nav-actions { display: none; }
+  .primary-nav {
+    position: fixed; top: 76px; left: 0; right: 0;
+    background: #050506 !important; flex-direction: column; padding: 1rem;
+    transform: translateY(-150%); transition: transform 0.3s;
+    border-bottom: 2px solid var(--red);
+  }
+  .primary-nav.open { transform: translateY(0); }
+  .primary-nav ul { flex-direction: column; width: 100%; gap: 0 !important; }
+  .primary-nav ul li:not(:last-child)::after { display: none; }
+  .primary-nav a { display: block; padding: 1rem !important; text-align: center; font-size: 0.9rem !important; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .primary-nav a.active::after { display: none; }
+}
+
+/* ============================================================
+   ANIMACJA SLIDERA (PŁYNNE PRZEJŚCIE)
+   ============================================================ */
+
+.hero-photo.slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.hero-photo.slider-img.active {
+  opacity: 0.8; /* Lekka przezroczystość, by tekst był czytelny */
+  z-index: 2;
+}
+
+.hero-overlay {
+  z-index: 3 !important; /* Gradient nad zdjęciami */
+  pointer-events: none;
+}
+
+.hero-content-wrapper {
+  z-index: 4 !important; /* Tekst nad wszystkim */
+}
+
+
+
+
+/* ============================================================
+   POPRAWKI MENU - WERSJA 2 (DOKLADNE ODWZOROWANIE)
+   ============================================================ */
+
+/* 1. Tlo naglowka - czysta czern + delikatne ciecia po bokach */
+.site-header {
+  background-color: #030303 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: none !important;
+  overflow: hidden;
+}
+
+/* Ukośne, ciemne ciecia tylko po bokach */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    /* Czerwony akcent z lewej */
+    linear-gradient(115deg, rgba(225, 6, 0, 0.15) 0%, transparent 25%),
+    /* Ukośne ciecia z lewej */
+    repeating-linear-gradient(115deg, transparent, transparent 30px, rgba(255,255,255,0.03) 30px, rgba(255,255,255,0.03) 32px),
+    /* Czerwony akcent z prawej */
+    linear-gradient(245deg, rgba(225, 6, 0, 0.15) 0%, transparent 25%),
+    /* Ukośne ciecia z prawej */
+    repeating-linear-gradient(245deg, transparent, transparent 30px, rgba(255,255,255,0.03) 30px, rgba(255,255,255,0.03) 32px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 2. Dolna linia (Swiecaca: biala w srodku, czerwona po bokach) */
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(225, 6, 0, 0.8) 20%, 
+    #ffffff 50%, 
+    rgba(225, 6, 0, 0.8) 80%, 
+    transparent 100%
+  ) !important;
+  box-shadow: 
+    0 0 10px 1px rgba(225, 6, 0, 0.8),
+    0 0 20px 4px rgba(225, 6, 0, 0.4),
+    0 0 30px 8px rgba(225, 6, 0, 0.1) !important;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* 3. Wnetrze naglowka */
+.header-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  padding-inline: 2rem !important;
+}
+
+/* 4. Logo i teksty */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem !important;
+  position: relative;
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Pionowa linia za logo */
+}
+
+.brand-mark svg {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.brand-text {
+  border-left: none !important;
+  padding-left: 0 !important;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-text .venol {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--red) !important;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.brand-text strong {
+  font-family: 'Bebas Neue', var(--font-display);
+  font-size: 1.6rem !important;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.brand-text .lodz {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 0.2em;
+}
+
+/* 5. Nawigacja i separatory */
+.primary-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 2rem;
+  justify-content: space-between;
+}
+
+.primary-nav ul {
+  display: flex;
+  gap: 0 !important;
+  margin: 0 !important;
+}
+
+.primary-nav ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Pionowe kreski miedzy linkami */
+.primary-nav ul li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-60%);
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.primary-nav a {
+  color: #d1d5db !important;
+  font-family: var(--font-body);
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1.8rem 1rem !important;
+  position: relative;
+  transition: color 0.3s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.primary-nav a:hover {
+  color: #fff !important;
+}
+
+/* 6. Aktywna zakladka (Czerwona dom + podkreslenie) */
+.primary-nav a.active {
+  color: #fff !important;
+}
+
+.primary-nav a.active .home-icon {
+  color: var(--red) !important;
+  fill: var(--red) !important;
+  filter: drop-shadow(0 0 5px rgba(225, 6, 0, 0.8));
+}
+
+.primary-nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background: var(--red);
+  box-shadow: 0 0 10px 2px rgba(225, 6, 0, 1), 0 0 20px 5px rgba(225, 6, 0, 0.5);
+  z-index: 10;
+}
+
+/* 7. Przycisk DOLACZ */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-nav-cta {
+  background: var(--red) !important;
+  color: #fff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2.2rem !important;
+  font-family: var(--font-display);
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  transform: skewX(-15deg);
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+  border: none;
+  margin-left: 1rem;
+}
+
+.btn-nav-cta span {
+  transform: skewX(15deg);
+  display: inline-block;
+}
+
+.btn-nav-cta .arrow {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-nav-cta:hover {
+  background: #b00400 !important;
+  box-shadow: 0 0 25px rgba(225, 6, 0, 0.8);
+}
+
+/* 8. Responsywnosc */
+@media (max-width: 1400px) {
+  .primary-nav a { font-size: 0.65rem !important; padding: 1.8rem 0.7rem !important; }
+  .btn-nav-cta { padding: 0.6rem 1.5rem !important; font-size: 0.8rem !important; }
+}
+@media (max-width: 1200px) {
+  .primary-nav a { font-size: 0.6rem !important; padding: 1.8rem 0.5rem !important; }
+}
+@media (max-width: 900px) {
+  .nav-actions { display: none; }
+  .primary-nav {
+    position: fixed; top: 76px; left: 0; right: 0;
+    background: #030303 !important; flex-direction: column; padding: 1rem;
+    transform: translateY(-150%); transition: transform 0.3s;
+    border-bottom: 2px solid var(--red);
+  }
+  .primary-nav.open { transform: translateY(0); }
+  .primary-nav ul { flex-direction: column; width: 100%; gap: 0 !important; }
+  .primary-nav ul li:not(:last-child)::after { display: none; }
+  .primary-nav a { display: block; padding: 1rem !important; text-align: center; font-size: 0.9rem !important; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .primary-nav a.active::after { display: none; }
+}
+/* ============================================================
+   USUNIECIE KRESKI/MYSLNIKA PRZY LOGO (DODANE AUTOMATYCZNIE)
+   ============================================================ */
+/* Upewniamy sie, ze przy marku i tekscie nie ma zadnych pseudoelementow z linia */
+.brand::before, .brand::after,
+.brand-mark::before, .brand-mark::after,
+.brand-text::before, .brand-text::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Jesli kreska to border-left w brand-text, usuwamy go */
+.brand-text {
+    border-left: none !important;
+}
+
+/* ============================================================
+   NAPRAWA: USUNIECIE BIALEJ KRESKI PRZY LOGO
+   ============================================================ */
+/* Ukrywamy wszystkie pseudoelementy w brand, brand-mark i brand-text */
+.brand::before, .brand::after,
+.brand-mark::before, .brand-mark::after,
+.brand-text::before, .brand-text::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Upewniamy sie, ze .brand-text nie ma zadnych obramowan (poza ewentualna linia oddzielajaca, ktora jest na .brand) */
+.brand-text {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Upewniamy sie, ze nav-search (jesli gdzies zostal) jest calkowicie ukryty */
+.nav-search, .nav-search::before, .nav-search::after {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+
+/* Opcjonalnie: upewniamy sie, ze ikona (svg) w brand-mark nie ma zadnych dodatkowych elementow */
+.brand-mark {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Kreska miedzy logo a menu ma byc tylko na .brand (po prawej stronie) i ma byc cienka */
+.brand {
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding-right: 1.5rem !important;
+    margin-right: 0 !important;
+}
