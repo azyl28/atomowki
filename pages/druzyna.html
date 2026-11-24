@@ -17,31 +17,29 @@
     <section class="page-hero">
       <div class="container">
         <p class="section-kicker">Drużyna</p>
-        <h1 class="page-title">Zawodniczki Atomówek</h1>
+        <h1 class="page-title">ZAWODNICZKI ATOMÓWEK</h1>
         <p class="page-lead">Poznaj skład seniorski oraz drużyny młodzieżowe U16 i U13.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="tabs" role="tablist" aria-label="Kategorie drużyn">
-          <button class="tab active" role="tab" aria-selected="true" data-team="senior">Seniorska</button>
-          <button class="tab" role="tab" aria-selected="false" data-team="u16">U16</button>
-          <button class="tab" role="tab" aria-selected="false" data-team="u13">U13</button>
-        </div>
-        <div id="playersGrid" class="players-grid" aria-live="polite"></div>
-        <p class="hint">Dane edytujesz w pliku <code>js/data.js</code> (tablica <code>ATOMOWKI_DATA.players</code>).</p>
+    <section class="players-v3-section">
+      <div class="players-v3-container">
+        <div id="playersTabs" class="players-v3-tabs" aria-label="Kategorie druzyny"></div>
+        <section class="meet-players-section"><h2 class="meet-players-title">Meet the Players</h2><div id="meetPlayersContainer"></div></section>
       </div>
     </section>
-
-    <div class="modal" id="playerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="playerModalTitle">
-      <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-content">
-        <button class="modal-close" data-close-modal aria-label="Zamknij">×</button>
-        <div class="modal-body" id="playerModalBody"></div>
+    <section class="roster-section">
+      <div class="players-v3-container">
+        <div class="roster-header">
+          <div>
+            <h2 class="roster-title">SKŁAD <span>DRUŻYNY</span></h2>
+            <p class="roster-subtitle">AKTYWNY SKŁAD // SEZON 2026</p>
+          </div>
+        </div>
+        <div id="rosterGrid" class="roster-grid" aria-live="polite"></div>
       </div>
-    </div>
-  </main>
+    </section>
+</main>
   <div id="footer-mount"></div>
   <button id="backToTop" class="back-to-top" aria-label="Powrót na górę">↑</button>
   <script src="../js/data.js"></script>
