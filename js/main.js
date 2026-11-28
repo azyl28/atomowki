@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    main.js - wspolna logika wszystkich podstron.
    ========================================================= */
 (function () {
@@ -346,35 +346,36 @@
   }
 
   function initNationalTeam() {
-    // pełna lista — pages/reprezentacja.html
-    const full = document.getElementById('nationalGrid');
-    // skrót — index.html (pierwsze 3)
     const mini = document.getElementById('nationalMini');
+    if (!mini) return;
+    
     const nt = D.nationalTeam || { players: [] };
-    const players = nt.players || [];
+    const players = (nt.players || []).filter(p => p.team === "senior").slice(0, 3);
+    
+    if (players.length === 0) return;
 
-        function cardHtml(p) {
-      var imgSrc = p.image ? p.image : '';
-      return '<article class="national-card reveal">' +
-        '<div class="nat-photo"><img src="' + BASE + imgSrc + '" alt="' + p.name + '" loading="lazy"></div>' +
-        '<span class="nat-badge">' + p.category + '</span>' +
-        '<div class="nat-body">' +
-          '<h3>' + p.name + '</h3>' +
-          '<span class="nat-year">Powolanie ' + p.year + '</span>' +
-          '<p class="nat-note">' + p.note + '</p>' +
-        '</div>' +
-      '</article>';
-    }
+    mini.innerHTML = players.map(function(p, index) {
+        // Pobieramy zdjecie z pola photo, usuwajac ../ jesli jest
+        let imgSrc = p.photo ? p.photo : "";
+        if (imgSrc.startsWith("../")) { imgSrc = imgSrc.replace("../", ""); }
+        
+        // Ustalamy poprawny tekst powolania
+        let powolanieText = "Powołanie do reprezentacji Polski";
 
-    if (full) {
-      full.innerHTML = players.map(cardHtml).join('');
-      full.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
-    }
-    if (mini) {
-      mini.innerHTML = players.slice(0, 3).map(cardHtml).join('');
-      mini.querySelectorAll('.reveal').forEach(function(n){ requestAnimationFrame(function(){ n.classList.add('visible'); }); });
-    }
-  }
+        return '<article class="national-card reveal" style="position:relative; overflow:hidden; border-radius:12px; background:#111; min-height:420px; display:flex; flex-direction:column;">' +
+            '<img src="' + imgSrc + '" alt="' + p.name + '" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; opacity:0.6;">' +
+            
+            '<div style="position:absolute; top:1rem; left:1rem; background:#e30613; color:#fff; font-size:0.75rem; font-weight:bold; padding:4px 8px; border-radius:4px; z-index:2;">REPREZENTACJA</div>' +
+            '<div style="position:absolute; top:1rem; right:1rem; color:#fff; font-size:0.75rem; font-weight:600; z-index:2; letter-spacing:1px; text-transform:uppercase;">' + p.name + '</div>' +
+            
+            '<div style="margin-top:auto; padding:1.5rem; position:relative; z-index:2; background:linear-gradient(to top, rgba(10,10,15,1) 30%, transparent);">' +
+                '<h3 style="margin:0 0 0.5rem 0; color:#fff; font-size:1.4rem; font-weight:800; text-transform:uppercase;">' + p.name + '</h3>' +
+                '<span style="color:#e30613; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:1rem;">' + powolanieText + '</span>' +
+                '<a href="pages/reprezentacja.html" style="display:inline-block; padding:0.6rem 1.2rem; background:#e30613; color:#fff; text-decoration:none; font-size:0.75rem; font-weight:bold; text-transform:uppercase; border-radius:4px;" onmouseover="this.style.background=\'#b0050f\'" onmouseout="this.style.background=\'#e30613\'">Czytaj więcej →</a>' +
+            '</div>' +
+        '</article>';
+    }).join("");
+}
 
   function initSeason() {
     const el = document.getElementById('seasonGrid');
