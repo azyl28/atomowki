@@ -1,0 +1,1148 @@
+/* ==========================================================
+   VENOL ATOMOWKI LODZ
+   PREMIUM TEAM EXPERIENCE
+   ========================================================== */
+
+.players-v3-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(225,6,0,.08),
+            transparent 38%
+        ),
+        #0b0b0d;
+}
+
+.players-v3-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    top: 120px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(225,6,0,.08),
+        transparent 68%
+    );
+    pointer-events: none;
+}
+
+.players-v3-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================
+   PREMIUM CAROUSEL
+   ========================================================== */
+
+.mp-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0 3rem;
+}
+
+.mp-carousel-track {
+    position: relative;
+    width: 100%;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+    perspective: 1400px;
+    overflow: hidden;
+}
+
+.mp-carousel-track.is-dragging {
+    cursor: grabbing;
+}
+
+.mp-card {
+    position: absolute;
+    width: min(360px, 72vw);
+    height: 530px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 22px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,31,36,.98),
+            rgba(10,10,12,.98)
+        );
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45);
+    cursor: pointer;
+
+    transform:
+        translateX(0)
+        scale(.82)
+        rotateY(0deg);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform .55s cubic-bezier(.22,1,.36,1),
+        opacity .4s ease,
+        filter .4s ease,
+        box-shadow .4s ease;
+}
+
+.mp-card.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10;
+    transform:
+        translateX(0)
+        scale(1)
+        rotateY(0deg);
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.62),
+        0 0 0 1px rgba(225,6,0,.12);
+}
+
+.mp-card.is-prev {
+    opacity: .48;
+    pointer-events: auto;
+    z-index: 5;
+    transform:
+        translateX(-285px)
+        scale(.82)
+        rotateY(18deg);
+    filter: brightness(.72);
+}
+
+.mp-card.is-next {
+    opacity: .48;
+    pointer-events: auto;
+    z-index: 5;
+    transform:
+        translateX(285px)
+        scale(.82)
+        rotateY(-18deg);
+    filter: brightness(.72);
+}
+
+.mp-card.is-hidden-left {
+    opacity: 0;
+    transform:
+        translateX(-650px)
+        scale(.68)
+        rotateY(25deg);
+}
+
+.mp-card.is-hidden-right {
+    opacity: 0;
+    transform:
+        translateX(650px)
+        scale(.68)
+        rotateY(-25deg);
+}
+
+.mp-card:hover.is-active {
+    box-shadow:
+        0 40px 110px rgba(0,0,0,.68),
+        0 0 45px rgba(225,6,0,.10);
+}
+
+.mp-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 25%,
+            rgba(255,255,255,.07) 48%,
+            transparent 58%
+        );
+
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.mp-card:hover::after {
+    opacity: 1;
+}
+
+.mp-card-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 1.1rem;
+}
+
+.mp-card-header .num {
+    display: grid;
+    place-items: center;
+
+    min-width: 48px;
+    height: 48px;
+
+    padding: 0 .7rem;
+
+    border-radius: 50%;
+
+    background: rgba(225,6,0,.95);
+    color: white;
+
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 25px rgba(225,6,0,.32);
+}
+
+.mp-card-header .logo {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.48);
+    border: 1px solid rgba(255,255,255,.15);
+
+    color: #fff;
+    backdrop-filter: blur(12px);
+}
+
+.mp-card-img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s cubic-bezier(.22,1,.36,1),
+        filter .6s ease;
+}
+
+.mp-card:hover .mp-card-img {
+    transform: scale(1.035);
+}
+
+.mp-card-img::after {
+    content: "";
+}
+
+.mp-card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 82px;
+
+    padding: 2rem 1.5rem 1rem;
+
+    z-index: 3;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(7,7,9,.22) 12%,
+            rgba(7,7,9,.92) 72%,
+            rgba(7,7,9,.98)
+        );
+}
+
+.mp-card-meta {
+    color: #ff4038;
+    font-size: .67rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-bottom: .35rem;
+}
+
+.mp-card-name {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    margin: 0 0 .25rem;
+    line-height: .95;
+    text-shadow: 0 5px 20px rgba(0,0,0,.65);
+}
+
+.mp-card-pos {
+    margin: 0;
+    color: rgba(255,255,255,.72);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.mp-card-stats {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 82px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    z-index: 5;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    background:
+        rgba(8,8,10,.82);
+
+    backdrop-filter: blur(16px);
+}
+
+.mp-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid rgba(255,255,255,.07);
+}
+
+.mp-stat:last-child {
+    border-right: 0;
+}
+
+.mp-stat span {
+    font-size: .58rem;
+    color: rgba(255,255,255,.43);
+    letter-spacing: .12em;
+    font-weight: 800;
+}
+
+.mp-stat strong {
+    margin-top: .15rem;
+
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: white;
+}
+
+/* ==========================================================
+   DRAG HINT
+   ========================================================== */
+
+.mp-carousel-wrapper::after {
+    content: "←  PRZECIĄGNIJ  →";
+    display: block;
+
+    text-align: center;
+
+    margin-top: -1rem;
+
+    color: rgba(255,255,255,.28);
+
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .22em;
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   ARROWS
+   ========================================================== */
+
+.mp-nav-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.14);
+
+    background: rgba(10,10,12,.74);
+
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 30;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.mp-nav-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.mp-nav-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.mp-nav-btn.prev {
+    left: 1rem;
+}
+
+.mp-nav-btn.next {
+    right: 1rem;
+}
+
+/* ==========================================================
+   PROFILE MODAL
+   ========================================================== */
+
+.atom-player-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99990;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    background:
+        rgba(2,2,4,.82);
+
+    backdrop-filter: blur(18px);
+}
+
+.atom-player-modal.is-open {
+    display: flex;
+    animation: atomModalFade .25s ease;
+}
+
+@keyframes atomModalFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.atom-player-profile {
+    position: relative;
+
+    width: min(1040px, 100%);
+
+    max-height: min(760px, 90vh);
+
+    overflow: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px,.9fr)
+        minmax(360px,1.1fr);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17181d 0%,
+            #0b0b0d 55%,
+            #160b0c 100%
+        );
+
+    box-shadow:
+        0 40px 140px rgba(0,0,0,.72);
+
+    overflow: hidden;
+
+    animation: atomProfileIn .4s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes atomProfileIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.atom-player-profile::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -260px;
+    top: -260px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225,6,0,.18),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+.atom-profile-photo {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #15161a 0 18px,
+            #111216 18px 36px
+        );
+}
+
+.atom-profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    min-height: 600px;
+}
+
+.atom-profile-photo::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.02),
+            rgba(0,0,0,.10) 45%,
+            rgba(0,0,0,.78) 100%
+        );
+}
+
+.atom-profile-number {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 1.5rem;
+    top: 1.5rem;
+
+    width: 68px;
+    height: 68px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    color: white;
+
+    font-family: var(--font-display);
+
+    font-size: 1.7rem;
+    font-weight: 900;
+
+    box-shadow:
+        0 15px 35px rgba(225,6,0,.38);
+}
+
+.atom-profile-photo-label {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 1.5rem;
+    bottom: 1.5rem;
+
+    color: white;
+
+    font-family: var(--font-display);
+
+    font-size: .8rem;
+
+    font-weight: 800;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-content {
+    position: relative;
+
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.atom-profile-kicker {
+    color: #ff4038;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    margin-bottom: .6rem;
+}
+
+.atom-profile-name {
+    font-size: clamp(2.3rem,5vw,4rem);
+
+    line-height: .9;
+
+    margin: 0 0 .55rem;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-position {
+    color: rgba(255,255,255,.6);
+
+    font-size: .82rem;
+
+    font-weight: 800;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+}
+
+.atom-profile-bio {
+    color: #c9ccd3;
+
+    line-height: 1.7;
+
+    margin-bottom: 1.5rem;
+}
+
+.atom-profile-data {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: .65rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.atom-profile-data-item {
+    padding: .9rem;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.035);
+}
+
+.atom-profile-data-item span {
+    display: block;
+
+    color: rgba(255,255,255,.38);
+
+    font-size: .58rem;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-data-item strong {
+    display: block;
+
+    margin-top: .2rem;
+
+    color: white;
+
+    font-family: var(--font-display);
+
+    font-size: 1.15rem;
+}
+
+.atom-profile-section-title {
+    margin: .5rem 0 .5rem;
+
+    font-family: var(--font-display);
+
+    font-size: .8rem;
+
+    color: #fff;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-achievements {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: .5rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.atom-profile-achievement {
+    padding: .5rem .7rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(225,6,0,.12);
+
+    border:
+        1px solid rgba(225,6,0,.28);
+
+    color: #ffb1ae;
+
+    font-size: .68rem;
+
+    font-weight: 800;
+}
+
+.atom-profile-close {
+    position: absolute;
+
+    z-index: 10;
+
+    top: 1rem;
+    right: 1rem;
+
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255,255,255,.13);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.55);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.atom-profile-close:hover {
+    background: var(--red);
+    transform: rotate(90deg);
+}
+
+.atom-profile-footer {
+    margin-top: auto;
+
+    padding-top: 1rem;
+
+    color: rgba(255,255,255,.25);
+
+    font-size: .6rem;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   ROSTER CLICKABLE
+   ========================================================== */
+
+.roster-card {
+    cursor: pointer;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 900px) {
+    .mp-card.is-prev {
+        transform:
+            translateX(-190px)
+            scale(.76)
+            rotateY(12deg);
+    }
+
+    .mp-card.is-next {
+        transform:
+            translateX(190px)
+            scale(.76)
+            rotateY(-12deg);
+    }
+
+    .atom-player-profile {
+        grid-template-columns: 1fr;
+        max-height: 92vh;
+    }
+
+    .atom-profile-photo {
+        min-height: 360px;
+        max-height: 430px;
+    }
+
+    .atom-profile-photo img {
+        min-height: 360px;
+        max-height: 430px;
+    }
+
+    .atom-profile-content {
+        padding: 2rem 1.5rem 2rem;
+    }
+
+    .atom-profile-name {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .mp-carousel-track {
+        min-height: 520px;
+    }
+
+    .mp-card {
+        width: min(330px, 82vw);
+        height: 470px;
+    }
+
+    .mp-card.is-prev,
+    .mp-card.is-next {
+        opacity: .16;
+    }
+
+    .mp-card.is-prev {
+        transform: translateX(-100px) scale(.72);
+    }
+
+    .mp-card.is-next {
+        transform: translateX(100px) scale(.72);
+    }
+
+    .mp-nav-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mp-nav-btn.prev {
+        left: .25rem;
+    }
+
+    .mp-nav-btn.next {
+        right: .25rem;
+    }
+
+    .mp-carousel-wrapper::after {
+        font-size: .56rem;
+    }
+
+    .atom-player-modal {
+        padding: .5rem;
+    }
+
+    .atom-player-profile {
+        border-radius: 18px;
+    }
+
+    .atom-profile-photo {
+        min-height: 300px;
+        max-height: 340px;
+    }
+
+    .atom-profile-photo img {
+        min-height: 300px;
+        max-height: 340px;
+    }
+
+    .atom-profile-content {
+        padding: 1.4rem;
+    }
+
+    .atom-profile-data {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .atom-profile-name {
+        font-size: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mp-card,
+    .atom-player-profile,
+    .atom-player-modal {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ATOMOWKI-FAN-CAROUSEL-RESTORE */
+
+/* Przywrócenie przestrzennego wachlarza zdjęć */
+.mp-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+}
+
+.mp-carousel-track {
+    position: relative;
+    width: 360px;
+    height: 500px;
+    min-height: 500px;
+    display: block;
+    transform-style: preserve-3d;
+    overflow: visible;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.mp-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transform-origin: center center;
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1),
+        opacity .6s ease,
+        filter .6s ease;
+}
+
+/* Zdjęcie wypełnia kartę */
+.mp-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 1;
+}
+
+/* Pozycje zdjęć w wachlarzu */
+.mp-card.is-active {
+    transform: translate(-50%, -50%) scale(1) translateZ(0);
+    z-index: 10;
+    opacity: 1;
+    filter: brightness(1);
+}
+
+.mp-card.is-prev {
+    transform: translate(-130%, -50%) scale(.85) rotateY(25deg);
+    z-index: 5;
+    opacity: .65;
+    filter: brightness(.55);
+    pointer-events: auto;
+}
+
+.mp-card.is-next {
+    transform: translate(30%, -50%) scale(.85) rotateY(-25deg);
+    z-index: 5;
+    opacity: .65;
+    filter: brightness(.55);
+    pointer-events: auto;
+}
+
+.mp-card.is-hidden-left {
+    transform: translate(-200%, -50%) scale(.7) rotateY(30deg);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mp-card.is-hidden-right {
+    transform: translate(100%, -50%) scale(.7) rotateY(-30deg);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Usunięcie elementów, które zajmują miejsce na zdjęciu */
+.mp-card-header,
+.mp-card-stats {
+    display: none !important;
+}
+
+/* Subtelny podpis na dole zdjęcia */
+.mp-card-body {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 28px 12px 14px;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.45) 65%,
+        transparent
+    );
+    text-align: center;
+}
+
+.mp-card-name {
+    margin: 0;
+    font-size: clamp(.85rem, 1.5vw, 1.1rem) !important;
+    line-height: 1.2 !important;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.mp-card-pos {
+    margin-top: 4px;
+    font-size: .72rem !important;
+    line-height: 1.2;
+}
+
+/* Responsywność */
+@media (max-width: 700px) {
+    .mp-carousel-wrapper {
+        height: 460px;
+    }
+
+    .mp-carousel-track {
+        width: min(300px, 76vw);
+        height: 430px;
+        min-height: 430px;
+    }
+
+    .mp-card.is-prev {
+        transform: translate(-105%, -50%) scale(.76) rotateY(20deg);
+    }
+
+    .mp-card.is-next {
+        transform: translate(5%, -50%) scale(.76) rotateY(-20deg);
+    }
+
+    .mp-card-name {
+        font-size: .9rem !important;
+    }
+}
+/* ATOMOWKI-DRAG-SWIPE-FIX-V2 */
+.mp-carousel-track {
+    touch-action: pan-y !important;
+    cursor: grab !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+.mp-carousel-track.is-dragging {
+    cursor: grabbing !important;
+}
+.mp-carousel-track .mp-card img {
+    pointer-events: none !important;
+    -webkit-user-drag: none !important;
+}
+.mp-carousel-track .mp-card.is-active,
+.mp-carousel-track .mp-card.is-prev,
+.mp-carousel-track .mp-card.is-next {
+    pointer-events: auto !important;
+}
+.mp-carousel-track .mp-card.is-hidden-left,
+.mp-carousel-track .mp-card.is-hidden-right {
+    pointer-events: none !important;
+}
+
+/* ===== ATOM: MNIEJSZA CZCIONKA NA ROSTER ===== */
+/* Dotyczy TYLKO siatki "Team Roster" (.roster-card) */
+/* Karuzela u gory (.mp-card) pozostaje bez zmian.   */
+
+.roster-card .roster-info .roster-name,
+.roster-card .roster-info .roster-name .first,
+.roster-card .roster-info .roster-name .last {
+    font-size: 0.78rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.01em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 480px) {
+    .roster-card .roster-info .roster-name,
+    .roster-card .roster-info .roster-name .first,
+    .roster-card .roster-info .roster-name .last {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* ===== KONIEC ATOM: MNIEJSZA CZCIONKA NA ROSTER ===== */

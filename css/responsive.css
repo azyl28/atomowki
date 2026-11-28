@@ -50,3 +50,49 @@
   .players-grid{grid-template-columns:1fr}
   .container{width:min(100% - 1.6rem,var(--container))}
 }
+/* ==========================================================
+   MODERN DESIGN MOBILE PATCH
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+    .atom-hero-glow {
+        width: 95vw !important;
+        height: 95vw !important;
+        right: -48vw !important;
+        top: -25vw !important;
+    }
+
+    .atom-scroll-progress {
+        height: 2px;
+    }
+
+    .section-title {
+        text-wrap: balance;
+    }
+
+    .hero-content-wrapper {
+        position: relative;
+        z-index: 4;
+    }
+
+    .hero-photo {
+        transform: none !important;
+    }
+
+    .atom-modern-reveal {
+        transform: translateY(20px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .atom-modern-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .atom-hero-glow {
+        display: none !important;
+    }
+}

@@ -1,0 +1,634 @@
+﻿/* ==========================================================
+   VENOL ATOMOWKI LODZ
+   MODERN DESIGN ENHANCEMENTS
+   ========================================================== */
+
+:root {
+    --atom-red: #e10600;
+    --atom-red-bright: #ff3028;
+    --atom-black: #0b0b0d;
+    --atom-glass: rgba(11,11,13,.72);
+    --atom-line: rgba(255,255,255,.10);
+}
+
+/* ==========================================================
+   GLOBAL
+   ========================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--atom-red);
+    color: #fff;
+}
+
+/* ==========================================================
+   SCROLL PROGRESS
+   ========================================================== */
+
+.atom-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #b00400 0%,
+        #e10600 50%,
+        #ff4038 100%
+    );
+    z-index: 99999;
+    box-shadow: 0 0 12px rgba(225,6,0,.65);
+    pointer-events: none;
+}
+
+/* ==========================================================
+   HEADER - GLASS EFFECT
+   ========================================================== */
+
+.site-header {
+    transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease,
+        backdrop-filter .35s ease;
+}
+
+.site-header.atom-header-scrolled {
+    background: rgba(8,8,10,.88) !important;
+    backdrop-filter: blur(18px) saturate(140%);
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.28),
+        0 1px 0 rgba(255,255,255,.05);
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+    isolation: isolate;
+}
+
+.hero-media {
+    overflow: hidden;
+}
+
+.hero-photo {
+    transition:
+        transform 7s cubic-bezier(.2,.8,.2,1),
+        filter 1s ease;
+}
+
+.hero-photo.active {
+    transform: scale(1.035);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background:
+        radial-gradient(
+            circle at 72% 42%,
+            rgba(225,6,0,.13),
+            transparent 34%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(4,4,6,.18),
+            transparent 45%,
+            rgba(4,4,6,.22)
+        );
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-text-box {
+    text-shadow:
+        0 4px 25px rgba(0,0,0,.32);
+}
+
+.hero-title {
+    transition:
+        transform .45s ease,
+        text-shadow .45s ease;
+}
+
+.hero-title:hover {
+    transform: translateX(4px);
+    text-shadow:
+        0 0 30px rgba(225,6,0,.16);
+}
+
+/* ==========================================================
+   HERO LIGHT
+   ========================================================== */
+
+.atom-hero-glow {
+    position: absolute;
+    width: 42vw;
+    height: 42vw;
+    max-width: 680px;
+    max-height: 680px;
+    right: -16vw;
+    top: -12vw;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(225,6,0,.16) 0%,
+            rgba(225,6,0,.055) 34%,
+            transparent 70%
+        );
+    pointer-events: none;
+    z-index: 2;
+    animation: atomGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes atomGlow {
+    from {
+        transform: scale(.94);
+        opacity: .55;
+    }
+
+    to {
+        transform: scale(1.06);
+        opacity: .95;
+    }
+}
+
+/* ==========================================================
+   HERO DECORATIVE LINE
+   ========================================================== */
+
+.atom-hero-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: min(58vw, 760px);
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--atom-red),
+            rgba(225,6,0,0)
+        );
+    z-index: 4;
+    opacity: .75;
+}
+
+/* ==========================================================
+   REVEAL
+   ========================================================== */
+
+.atom-modern-reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition:
+        opacity .75s cubic-bezier(.22,1,.36,1),
+        transform .75s cubic-bezier(.22,1,.36,1);
+}
+
+.atom-modern-reveal.atom-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.atom-modern-reveal:nth-child(2) {
+    transition-delay: .08s;
+}
+
+.atom-modern-reveal:nth-child(3) {
+    transition-delay: .16s;
+}
+
+.atom-modern-reveal:nth-child(4) {
+    transition-delay: .24s;
+}
+
+/* ==========================================================
+   SECTION HEADINGS
+   ========================================================== */
+
+.section-kicker {
+    transition:
+        letter-spacing .35s ease,
+        color .35s ease;
+}
+
+.section-head:hover .section-kicker {
+    letter-spacing: .18em;
+    color: #ff4038;
+}
+
+.section-title {
+    position: relative;
+}
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.news-card,
+.success-card,
+.training-card,
+.coach-card,
+.national-card,
+.match-card,
+.roster-card {
+    transition:
+        transform .38s cubic-bezier(.22,1,.36,1),
+        box-shadow .38s ease,
+        border-color .38s ease;
+}
+
+.news-card:hover,
+.success-card:hover,
+.training-card:hover,
+.coach-card:hover,
+.national-card:hover,
+.match-card:hover,
+.roster-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.27),
+        0 0 0 1px rgba(225,6,0,.08);
+}
+
+/* ==========================================================
+   IMAGE HOVER
+   ========================================================== */
+
+.news-card img,
+.success-card img,
+.training-card img,
+.coach-card img,
+.national-card img,
+.roster-card img {
+    transition:
+        transform .75s cubic-bezier(.22,1,.36,1),
+        filter .5s ease;
+}
+
+.news-card:hover img,
+.success-card:hover img,
+.training-card:hover img,
+.coach-card:hover img,
+.national-card:hover img,
+.roster-card:hover img {
+    transform: scale(1.045);
+}
+
+/* ==========================================================
+   GALLERY
+   ========================================================== */
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    transition:
+        transform .75s cubic-bezier(.22,1,.36,1),
+        filter .5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+    filter: saturate(1.06);
+}
+
+.gallery-item::after {
+    content: "ZOBACZ →";
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 7px 11px;
+    background: rgba(8,8,10,.74);
+    border: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.btn,
+.btn-hero,
+.btn-nav-cta {
+    transition:
+        transform .24s ease,
+        box-shadow .24s ease,
+        background-color .24s ease,
+        border-color .24s ease;
+}
+
+.btn:hover,
+.btn-hero:hover,
+.btn-nav-cta:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active,
+.btn-hero:active,
+.btn-nav-cta:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   RED BUTTON SHINE
+   ========================================================== */
+
+.btn-primary,
+.btn-hero-primary,
+.btn-nav-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before,
+.btn-hero-primary::before,
+.btn-nav-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background:
+        linear-gradient(
+            105deg,
+            transparent,
+            rgba(255,255,255,.22),
+            transparent
+        );
+    transform: skewX(-20deg);
+    transition: left .65s ease;
+    pointer-events: none;
+}
+
+.btn-primary:hover::before,
+.btn-hero-primary:hover::before,
+.btn-nav-cta:hover::before {
+    left: 140%;
+}
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.cta-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -160px;
+    top: -160px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(225,6,0,.18),
+            transparent 68%
+        );
+    pointer-events: none;
+    transition: transform .7s ease;
+}
+
+.cta-box:hover::before {
+    transform: scale(1.18);
+}
+
+/* ==========================================================
+   TIMELINE
+   ========================================================== */
+
+.timeline-fancy-item,
+.timeline li {
+    transition:
+        transform .35s ease;
+}
+
+.timeline-fancy-item:hover,
+.timeline li:hover {
+    transform: translateY(-3px);
+}
+
+.tf-dot span {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.timeline-fancy-item:hover .tf-dot span {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 0 8px rgba(225,6,0,.08);
+}
+
+/* ==========================================================
+   PLAYER CARDS
+   ========================================================== */
+
+.player-card,
+.player-v3-card {
+    transition:
+        transform .4s cubic-bezier(.22,1,.36,1),
+        box-shadow .4s ease;
+}
+
+.player-card:hover,
+.player-v3-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30);
+}
+
+/* ==========================================================
+   FILTER BUTTONS
+   ========================================================== */
+
+.filter,
+.players-v3-tab {
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .2s ease;
+}
+
+.filter:hover,
+.players-v3-tab:hover {
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   BACK TO TOP
+   ========================================================== */
+
+.atom-back-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 50%;
+    background: rgba(10,10,12,.78);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px);
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease,
+        background .25s ease,
+        border-color .25s ease;
+    backdrop-filter: blur(14px);
+    font-size: 1.1rem;
+}
+
+.atom-back-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.atom-back-top:hover {
+    background: var(--atom-red);
+    border-color: var(--atom-red);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================
+   FLOATING SIDE LABEL
+   ========================================================== */
+
+.atom-side-label {
+    position: fixed;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left center;
+    z-index: 300;
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .24em;
+    color: rgba(255,255,255,.35);
+    pointer-events: none;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 860px) {
+
+    .atom-side-label {
+        display: none;
+    }
+
+    .atom-hero-glow {
+        width: 80vw;
+        height: 80vw;
+        right: -35vw;
+        top: -20vw;
+    }
+
+    .atom-back-top {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .hero-title:hover {
+        transform: none;
+    }
+
+    .gallery-item::after {
+        display: none;
+    }
+
+    .news-card:hover,
+    .success-card:hover,
+    .training-card:hover,
+    .coach-card:hover,
+    .national-card:hover,
+    .match-card:hover,
+    .roster-card:hover,
+    .player-card:hover,
+    .player-v3-card:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
+
+    .atom-modern-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .atom-hero-glow {
+        display: none;
+    }
+}

@@ -1,0 +1,392 @@
+﻿/* ==========================================================
+   VENOL ATOMÓWKI ŁÓDŹ
+   EXISTING PLAYER MODAL - PREMIUM ENHANCEMENT
+   ========================================================== */
+
+/*
+   WAŻNE:
+   Ten CSS nie tworzy nowego modala.
+   Styluje istniejący:
+   .atom-player-modal
+   .atom-player-profile
+   .atom-profile-photo
+   .atom-profile-content
+*/
+
+.atom-player-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99990;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(225, 6, 0, .14),
+            transparent 42%
+        ),
+        rgba(3, 3, 5, .84);
+
+    backdrop-filter:
+        blur(18px)
+        saturate(125%);
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(125%);
+}
+
+.atom-player-profile {
+    position: relative;
+
+    width: min(1080px, 94vw);
+    max-height: 90vh;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns:
+        minmax(340px, .95fr)
+        minmax(420px, 1.05fr);
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,23,28,.98),
+            rgba(8,8,11,.99) 58%,
+            rgba(24,7,9,.98)
+        );
+
+    box-shadow:
+        0 40px 120px rgba(0,0,0,.72),
+        0 0 80px rgba(225,6,0,.10);
+
+    animation:
+        atomProfileIn .48s
+        cubic-bezier(.22,1,.36,1)
+        both;
+}
+
+@keyframes atomProfileIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+/* ----------------------------------------------------------
+   ZDJĘCIE
+   ---------------------------------------------------------- */
+
+.atom-profile-photo {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+}
+
+.atom-profile-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.03) 0%,
+            transparent 38%,
+            rgba(0,0,0,.18) 58%,
+            rgba(0,0,0,.88) 100%
+        );
+
+    pointer-events: none;
+}
+
+.atom-profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1s cubic-bezier(.22,1,.36,1);
+}
+
+.atom-player-profile:hover
+.atom-profile-photo img {
+    transform: scale(1.045);
+}
+
+/* ----------------------------------------------------------
+   PRAWA STRONA
+   ---------------------------------------------------------- */
+
+.atom-profile-content {
+    position: relative;
+
+    padding: 54px 50px 42px;
+
+    overflow-y: auto;
+
+    color: #fff;
+}
+
+.atom-profile-content::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -250px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225,6,0,.14),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+.atom-profile-name {
+    position: relative;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size:
+        clamp(2.4rem, 5vw, 4.8rem);
+
+    line-height: .92;
+
+    font-weight: 950;
+
+    letter-spacing: -.045em;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-position {
+    margin-top: 14px;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: .78rem;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+.atom-profile-content::after {
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 3px;
+
+    margin:
+        24px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e10600,
+            #ff4038,
+            transparent
+        );
+}
+
+.atom-profile-bio {
+    color:
+        rgba(255,255,255,.72);
+
+    line-height: 1.75;
+}
+
+/* ----------------------------------------------------------
+   STATYSTYKI
+   ---------------------------------------------------------- */
+
+.atom-profile-data {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.atom-profile-data > * {
+    min-height: 96px;
+
+    padding: 16px;
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.atom-profile-data > *:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(225,6,0,.42);
+}
+
+/* ----------------------------------------------------------
+   OSIĄGNIĘCIA
+   ---------------------------------------------------------- */
+
+.atom-profile-achievements {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.atom-profile-achievement {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    padding: 8px 13px;
+
+    border:
+        1px solid rgba(225,6,0,.25);
+
+    border-radius: 999px;
+
+    background:
+        rgba(225,6,0,.07);
+
+    color:
+        rgba(255,255,255,.74);
+
+    font-size: .66rem;
+
+    font-weight: 800;
+}
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .atom-player-modal {
+        padding: 12px;
+    }
+
+    .atom-player-profile {
+        width: 100%;
+        max-height: 94vh;
+
+        grid-template-columns: 1fr;
+
+        border-radius: 22px;
+
+        overflow-y: auto;
+    }
+
+    .atom-profile-photo {
+        min-height: 360px;
+        height: 44vh;
+        max-height: 450px;
+    }
+
+    .atom-profile-content {
+        padding: 32px 24px 28px;
+        overflow: visible;
+    }
+
+    .atom-profile-name {
+        font-size:
+            clamp(2rem, 11vw, 3.5rem);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .atom-player-modal {
+        padding: 7px;
+    }
+
+    .atom-player-profile {
+        border-radius: 19px;
+    }
+
+    .atom-profile-photo {
+        min-height: 300px;
+        height: 40vh;
+    }
+
+    .atom-profile-content {
+        padding: 26px 19px 24px;
+    }
+
+    .atom-profile-data {
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .atom-player-profile,
+    .atom-profile-photo img {
+        animation: none !important;
+        transition: none !important;
+    }
+}
